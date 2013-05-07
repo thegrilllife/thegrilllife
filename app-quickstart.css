@@ -1,10 +1,233 @@
-body,html	{font-size:100%;}
-
+body,html	{font-size:100%; margin:0px; padding:0px; font-family:"Trebuchet MS",Arial,Helvetica,sans-serif; font-size:13px;}
+ul, li {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
 #appTemplates {display:none;} /* container for all templates. should be hidden */
 
-#appPreView	{width:550px; margin:0 auto;}
+#appPreView	{width:550px; margin: 100px auto;}
+#appPreView table {margin: 0 auto;}
+#loader{ margin-top:10px; line-height:25px;}
+.appview{ width:400px; padding:30px 50px 35px 50px; border:#6e6f70 solid 1px; border-radius:10px; box-shadow:0 0 12px #939598; }
+.top_bg {
+    background: none repeat scroll 0 0 #939598;
+    height: 27px;
+    line-height: 27px;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 1000px;
+}
+.top_hdr {
+    color: #FFFFFF;
+    height: 27px;
+    line-height: 27px;
+    text-align: right;
+}
+.cart {
+    background: url(images/shopngcart.gif) no-repeat scroll left 5px transparent;
+    padding: 0 0 0 26px;
+}
+.live_chat {
+    background: url(images/livechat.gif) no-repeat scroll left 5px transparent;
+    font-size: 17px;
+    padding: 0 0 0 26px;
+    text-transform: uppercase;
+}
+.live_chat a {
+    color: #FFFFFF;
+	text-decoration:none;
+}
+.alignright {
+    float: right;
+}
+
+.alignleft {
+    float: left;
+}
+.top_links {
+    color: #FFFFFF;
+    font-size:12px;
+}
+
+.top_links a {
+    color: #FFFFFF;
+    margin: 0 9px;
+	text-decoration:none;
+}
+
+.call {
+    font-size:12px;
+    margin: 0 35px;
+}
+
+.connect {
+    font-size: 12px;
+    line-height: 27px;
+	margin:0 17px 0 0;
+}
+.connect span {
+    margin: 0 5px 0 0;
+}
+.connect a img {
+    margin: 3px 0 0 2px;
+}
+.logo {
+    margin-right: 72px;
+}
+.banner_margin {
+    margin: 18px 10px 0 0;
+}
+
+.banner_margin1 {
+    margin: 10px 0 0;
+}
+#header {
+    height: 103px;
+    margin-top: 4px;
+}
+
+.nav {
+    background: url(images/navbg.gif) repeat-x scroll left top #000000;
+    border: 1px solid #D1D3D4;
+    height: 50px;
+    line-height: 50px;
+}
+
+#dualcats_onhover div.top_cat a {
+    font-weight: bold;
+    padding: 2px 0;
+    text-decoration: none;
+}
+.nav a {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px;
+    text-decoration: none;
+    text-shadow: 2px 2px #1E1E1F;
+}
+
+.search_btn, .textbox {
+    line-height: normal !important;
+}
+
+.search_btn input {
+    border: 0 none;
+    cursor: pointer;
+    height: 34px;
+    margin: 8px 0 0;
+    width: 39px;
+}
+
+.nav .search {
+    padding: 0 8px;
+}
+.textbox input {
+    border: 1px solid #77787B;
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    margin: 8px 0 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 290px;
+}
+
+#dualcats_onhover div.top_cat {
+    display: inline;
+}
+#dualcats_onhover .anylinkcss {
+    margin-top: 5px;
+    position: absolute;
+    visibility: hidden;
+    width: 175px;
+    z-index: 1000;
+}
+
+#dualcats_onhover .anylinkcss a {
+    color: #FFFFFF;
+    display: block;
+    font-weight: bold;
+    padding: 1px 4px;
+    text-decoration: none;
+}
+#dualcats_onhover .anylinkcss a:hover {
+    background: none repeat scroll 0 0 #000000;
+    color: #FFFFFF;
+}
+
+.logo {margin-right: 72px;}
+.alignleft {float: left;}
+#dualcats_onhover div.sub_cats {
+    background-color: #333333;
+    border: 2px solid #000000;
+    font-size: 11px;
+    line-height: 140%;
+}
 
 
+
+.footer {
+    background: url(images/footerbg.gif) repeat-x scroll left top #949699;
+    border-top: 1px solid #939598;
+    height: 61px;
+    margin: 10px 0 5px;
+}
+
+.ftr_height {height: 61px; padding:15px 0;}
+.lastcol_mar {margin-bottom: 5px;}
+.lastcol_mar1 {margin-bottom: 13px;}
+.lastcol_mar2 {margin-left: 15px;}
+.signup_img { margin-right: 10px;}
+.copyright {color: #636466;font-size: 11px;margin: 17px 0;text-align: right;}
+
+.footer .submit_btn input {
+    background: url(images/submit.gif) no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    height: 27px;
+    width: 79px;
+}
+
+.footer .textbox input {
+    border: 1px solid #77787B;
+    color: #000000;
+    font-size: 13px;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 8px 0 0;
+    padding: 0 0 0 8px;
+    width: 227px;
+}
+
+.ftr_margin {margin: 0 0 30px 232px; width: 772px;}
+.ftr_margin h3{ margin:0 0 15px; padding:auto;}
+.wikinav a {display: block;padding: 2px 0;}
+#leftside{ width:211px; margin:0px 12px 0 0; float:left;}
+#leftside .leftbox{ border:#939598 solid 1px; margin:10px 0 0 0;}
+#leftside .leftbox h1{ background: url(images/navbg.gif); height:16px; font-size:16px; color:#fff; font-weight:bold; padding:14px 0 21px 12px;}
+#leftside .leftbox ul{ margin:12px 12px 5px 12px;}
+#leftside .leftbox ul li{ margin:0px; padding:0 0 10px;}
+#leftside .leftbox ul li a{ color:#636466; text-decoration:none;}
+#leftside .leftbox ul li a:hover{ color:#636466; text-decoration:underline;}
+
+#leftside .recent{ border:#939598 solid 1px; margin:10px 0 0 0;}
+#leftside .recent h1{ background: url(images/navbg.gif); height:16px; font-size:16px; color:#fff; font-weight:bold; padding:14px 0 21px 12px;}
+#leftside .recent ul{ margin:12px 12px 5px 12px;}
+#leftside .recent ul li{ margin:0 0 20px 0px; min-height:51px; padding:0 0 0px; color:#51413b; clear:both;}
+#leftside .recent ul li span{ float:right; font-weight:bold;}
+#leftside .recent img{ margin:0px 20px 0 0;}
+
+.sideBanner{ width:211px; margin:0px 12px 0 0; float:left;}
+.sideBanner img{ margin-top:15px;}
+
+#mainContentArea{ width:776px; float:left; padding:10px 0 0 0;}
+.cb{ clear:both;}
+.feat_cats_box{ background:url(images/featuredbg.gif) repeat-x; height:194px; width:148px; margin:0 6px 0 0; border:#6e6f70 solid 1px; font-size:14px; color:#656768;}
+.feat_cats_box .img{ line-height:155px;}
 /*
 loading class. add class to your templates if you want a loading graphic to appear while data is requested. add only to the parent element. 
 loadingBG classname is removed once template is rendered.
@@ -17,11 +240,15 @@ span.wait	{display:inline-block;}
 
 /******* global styles - added for cross-browser uniformity or usability ******/
 
+.viewdetails{ border:0px; background:none; padding:0px; margin:0px;}
 img	{border:0; vertical-align: top; display:inline-block;} /* vertical-align: top; removes the whitespace sometimes added under an image.  */
 button {display:inline-block; margin: 0; padding: 0; cursor:pointer !important;}
-p	{margin-bottom:12px;}
+p{margin-bottom:12px;}
 
-
+a {
+    color: #636466;
+    text-decoration: none;
+}
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -32,7 +259,7 @@ td.valignMiddle	{vertical-align: middle;}
 
 
 /* feel free to delete these or override in your own .css file */
-h1, h2, h3, h4, h5, h6	{padding:0; margin:0;}
+h1, h2, h3, h4, h5, h6	{padding:0; margin:0; color:#515151;}
 p	{margin:0 0 12px 0;}
 
 /* chrome and safari add an outer border/glow to the input in focus. this removes it. */
@@ -62,7 +289,7 @@ and offMenu is toggle off, hiding the change button.
 
 /* some general classes used for styling templates. feel free to use these. It's not recommended you delete or rename them */
 
-
+.featured_prod{ background:url(images/fbg.gif) repeat-x; height:21px; margin-bottom:10px; border:#000 solid 1px; font-size:14px; color:#fff; padding:2px 0 0 8px;}
 
 /******* positioning *******/
 
@@ -167,16 +394,16 @@ and offMenu is toggle off, hiding the change button.
 
 /* pages like  company and/or customer are in a two column format. by default, a narrow right w/ nav and the main column w/ content. */
 
-.mainColumn	{width:75%;}
+.mainColumn	{/*width:75%;*/width:100%;}
 .sideline	{float:right; width:20%; margin:0 0 24px 0px;}
-.sideline a	{padding:5px 0; text-decoration:none; display:block;} /* recommend at least 5px vert padding for mobile/pad */
+.sideline a	{padding:0px 0; text-decoration:none; display:block;} /* recommend at least 5px vert padding for mobile/pad */
 
 
 
 
 /* app nav */
 
-#appNav {position:relative; height:1px; overflow:visible; z-index:99;}
+#appNav {position:relative; overflow:visible; z-index:99;}
 #appNav .prodDetailPrevItemButton	{position:absolute; top:20px; left:-10px;}
 #appNav .prodDetailNextItemButton	{position:absolute; top:20px; right:-10px;}
 
@@ -197,16 +424,16 @@ and override using classes or id's as needed.
 .quickView	{position:absolute; top:5px; right:5px; z-index:1001;} /* jqui modal has zindex 1002 */
 
 /* over rides - height and width ensure each row is the same height. percentages could be used for width */
-.productList > li	{width:150px; height:250px; position:relative;}
+.productList > li	{height:250px; padding:10px; position:relative; width:148px; min-height:170px; border:#242525 solid 1px; text-align:center;}
 .lineItemProdlist > li	{position:relative; display:block; padding:12px 0; width:100% !important; height:auto !important; border-bottom:1px dotted #efefef;} /* single column product list - used in cart, checkout, etc. productList class is also defined in these cases. */
 
 .lineItemProdlist .prodThumb	{margin-right:12px;}
 
-.categoryList > li	{width:150px; height:200px;}
+.categoryList > li	{width:148px; height:200px; border: 1px solid #242525;text-align: center; padding:10px;}
 
 .productList h4, .productList h5, .productList h6, .categoryList h4, .categoryList h5, .categoryList h6	{padding:0; margin:0;} /* h4 - h6 are used in default templates for name, price, etc */
 
-.productList li, .categoryList li	{font-size:.8em;}
+.productList li, .categoryList li	{font-size:14px; color:#51413b;}
 
 .productList h4, .categoryList h4	{font-size:1em;}
 .productList h5, .categoryList h5	{font-size:.9em;}
@@ -413,10 +640,10 @@ HELP PAGES
 
 /***** CONTACT US ******/
 #contactForm {float:right; margin: 0 0 12px 12px;}
-#contactForm fieldset	{border:1px solid #cccccc; padding:10px;}
+#contactForm fieldset	{border:1px solid #939598; padding:10px; width:310px;}
 #contactForm div	{margin-bottom:5px}
-#contactForm label	{width:105px; display:inline-block; margin-right:6px; vertical-align:top; text-align:right;}
-#contactForm input, #contactForm textarea	{width:145px;}
+#contactForm label	{width:75px; display:inline-block; margin-right:6px; vertical-align:top; text-align:right;}
+#contactForm input, #contactForm textarea	{width:205px; border:#ccc solid 1px; padding:2px;}
 #contactForm textarea	{height:125px;}
 
 
@@ -444,8 +671,8 @@ CART
 .cartSummaryTotalsContainer .cartSummaryContainer	{padding:12px;}
 .cartZipCodeContainer, .cartAltButtonsContainer, .cartSummaryContainer	{margin-bottom:12px; padding-bottom:12px; border-bottom:1px dotted #efefef;}
 
-.cartStuffContainer	{width:60%; vertical-align:top; padding-right:12px;}
-.cartSummaryTotalsContainer {width:40%; padding-left:12px; font-size:.8em;} /* by default, this is the right column */
+.cartStuffContainer	{width:75%; vertical-align:top; padding-right:12px;}
+.cartSummaryTotalsContainer {width:25%; padding-left:12px; font-size:.8em;} /* by default, this is the right column */
 
 .checkoutButtonsContainer span	{display:block; float:left; margin:0 12px 12px 0;}
 
@@ -537,3 +764,312 @@ CHECKOUT
 
 
 .debug	{position:fixed; bottom:0; left:0; right:0; background:#ffffff; color:#000000; border-top:1px solid #666666; padding:5px;}
+
+.number_slideshow{
+    line-height: 20px;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    display: block;
+	height:200px;
+}
+.number_slideshow .number_slideshow_nav{
+    filter: alpha(opacity=60);
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.number_slideshow .number_slideshow_nav li{
+    box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+    -o-box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+    -khtml-box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+    margin-left: 6px;
+    position: relative;
+    float: left;
+}
+.number_slideshow .number_slideshow_nav li a{
+    padding-left: 8px;
+    padding-right: 8px;
+	font-size:12px;
+	font-weight:bold;
+}
+.number_slideshow ul{
+    margin: 0px;
+    background-position:center center;
+    background-repeat: no-repeat;
+}
+.number_slideshow ul li{
+     border-radius: 0px;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    position: absolute;
+}
+.number_slideshow ul li p{
+    margin: 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 13px;
+    line-height: 23px;
+}
+.number_slideshow ul li a{
+    text-decoration: none;
+}
+.number_slideshow ul li a img{
+    border: none;
+	border-radius:4px;
+}
+.ztitle2{ color: #666666;
+    font-size: 14px;
+    font-weight: bold;
+    }
+
+.ztxt {
+    color: #515151;
+    font-size: 14px;
+}
+.zborder {
+    border: 1px solid #333;
+}
+.zbox {
+    border: 1px solid #C0C0C0;
+}
+
+.zbody {
+    background-color: #FFFFFF;
+}
+
+.zbox_body {
+    background-color: #EDEEEF;
+    color: #515151;
+    font-size: 11px;
+}
+.zbox_head {
+    background-color: #DBDDDF;
+    color: #959B9E;
+    font-size: 12px;
+}
+.zcolor {
+    background-color: #232424;
+    color: #FFFFFF;
+}
+.zcolor_contrast {
+    background-color: #717171;
+    color: #FFFFFF;
+}
+.zcolor_dark {
+    background-color: #3E3F40;
+    color: #FFFFFF;
+}
+.zcolor_light {
+    background-color: #EDF2FD;
+    color: #515151;
+}
+.zform_button {
+    background-color: #D2D2D5;
+    border: 1px solid #5C5C5D;
+    color: #444444;
+    font-size: 11px;
+}
+.zform_select {
+    background-color: #FFFFFF;
+    border: 1px solid #B7B8BA;
+    color: #000000;
+    font-size: 11px;
+}
+.zform_textarea {
+    background-color: #FFFFFF;
+    border: 1px solid #AEB3B8;
+    color: #000000;
+    font-size: 11px;
+}
+.zform_textbox {
+    background-color: #FFFFFF;
+    border: 1px solid #AEB3B8;
+    color: #000000;
+    font-size: 11px;
+}
+.zhint {
+    color: #666666;
+    font-size: 10px;
+}
+.zlink {
+    color: #4B3803;
+}
+.zsmall {
+    color: #515151;
+    font-size: 10px;
+}
+.ztab0 {
+    background-color: #EDF2FD;
+    color: #515151;
+    font-size: 11px;
+}
+.ztab1 {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: bold;
+}
+.ztabbody {
+    background-color: #EAE7E5;
+    color: #515151;
+    font-size: 11px;
+}
+.ztable_head {
+    background-color: #646566;
+    color: #FFFFFF;
+    font-size: 13px;
+}
+.ztable_row {
+    color: #666666;
+    font-size: 12px;
+}
+.ztable_row0 {
+    color: #666666;
+    font-size: 12px;
+	padding:0 0 7px 0px;
+}
+.ztable_row1 {
+    background-color: #FFFFFF;
+    color: #666666;
+    font-size: 12px;
+}
+.ztable_row_small {
+    color: #666666;
+    font-size: 10px;
+}
+.ztable_row_title {
+    color: #666666;
+    font-size: 14px;
+    font-weight: bold;
+}
+.ztitle {
+    color: #999CA3;
+    font-size: 15px;
+    font-weight: bold;
+}
+.ztitle2 {
+    color: #666666;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.zwarn {
+    color: #FF0000;
+    font-weight: bold;
+}
+.wiki_section h2{ margin:0 0 10px;}
+.wiki_section h3{margin:0 0 5px;}
+#shippingArticle h1{ font-size:21px; margin-bottom:10px;}
+#shippingArticle h2{margin:0 0 10px; font-size:16px;}
+#aboutArticle h1{ font-size:21px; margin-bottom:10px;}
+#aboutArticle h2{margin:0 0 10px; font-size:16px;}
+#returnArticle h1{ font-size:21px; margin-bottom:10px;}
+#returnArticle h2{margin:0 0 10px; font-size:16px;}
+#privacyArticle h1{ font-size:21px; margin-bottom:10px;}
+#privacyArticle h2{margin:0 0 10px; font-size:16px;}
+#paymentArticle h1{margin:0 0 10px; font-size:20px;}
+#paymentArticle h2{margin:0 0 10px; font-size:16px;}
+#faqArticle h1{ font-size:21px; margin-bottom:10px;}
+#faqArticle h2{margin:0 0 10px; font-size:16px;}
+#contactArticle h1{font-size:21px; margin-bottom:10px;}
+#recipesArticle h1{font-size:21px; margin-bottom:10px;}
+
+#tabs-1{ padding:0px !important;}
+#tabs-1 .prodlist1{ padding:0px !important;}
+#tabs-2 #prodlist2 { padding:0px !important;}
+#tabs-3 #prodlist3 { padding:0px !important;}
+#tabs-4 #prodlist4 { padding:0px !important;}
+#tabs-5 #prodlist5{ padding:0px !important;}
+.prod_w {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #242525;
+    color: #51413B;
+    padding: 5px 1px 15px 5px;
+    text-align: center;
+    width: 178px;
+}
+
+.feat_prodlist_outer{ margin:0 0 0 -6px;}
+
+.feat_prodlist_outer .name {
+    height: 35px;
+    overflow: hidden;
+}
+
+.price {
+    margin-bottom: 15px;
+}
+.addtocart {
+    margin-bottom: 6px;
+}
+
+.ui-widget-overlay ui-front{opacity:0; background:none;}
+.ui-widget-overlay{opacity:0;}
+.ui-dialog .ui-widget .ui-widget-content .ui-corner-all .ui-front .ui-draggable .ui-resizable{top:150px;}
+#loginFormForModal{position:relative; top:80px;}
+#modalCartContents{background:#fff;}
+#modalCart{ height:auto!important;}
+td.cartSummaryTotalsContainer div.ui-widget{ background:#FFFFFF!important; padding:10px 15px 0 15px;}
+td.cartSummaryTotalsContainer div.ui-widget h2.ui-widget-header{ font-family:"Trebuchet MS",Arial,Helvetica,sans-serif; font-size:18px; font-weight:bold; text-align:center; color:#636466;}
+#modalCartContents{border:2px solid #D1D3D4; margin:10px 0 0 0; background:#f7f7f7; padding:10px}
+.ui-dialog .ui-dialog-title{background:#CCC; width:100%;}
+.ui-dialog .ui-dialog-titlebar-close{ right:15px!important;}
+td.cartSummaryTotalsContainer div.ui-widget div.cartSummaryContainer{ float:left;}
+section.stdMargin menu.cartAltButtonsContainer button.ui-button-text{ width:100%;  background-color: #E6E6E6;
+background-image: -moz-linear-gradient(center top , #D1D3D4, #A5A7A9); background-repeat: repeat-x; border: 1px solid #D2D2D2; border-radius: 5px 5px 5px 5px; color: #636466!important; float: left; font-family: "Trebuchet MS",Arial,Helvetica,sans-serif; font-size: 20px; margin-bottom:10px;}
+section.stdMargin div.checkoutButtonsContainer span{ margin:0px; padding:0px; width:100%;}
+div.checkoutButtonsContainer span button.ui-button-text{ width:100%;  background-color: #E6E6E6;
+background-image: -moz-linear-gradient(center top , #D1D3D4, #A5A7A9); background-repeat: repeat-x; border: 1px solid #D2D2D2; border-radius: 5px 5px 5px 5px; color: #636466!important; float: left; font-family: "Trebuchet MS",Arial,Helvetica,sans-serif; font-size: 20px; margin-bottom:10px; font-weight:normal!important;}
+td.cartSummaryTotalsContainer div.cartSummaryContainer{ margin:0px; padding:0px;}
+td.cartSummaryTotalsContainer section.stdMargin{ margin:0px;}
+div.ui-dialog-titlebar span#ui-id-2.ui-dialog-title{   background-color: #E6E6E6;
+    background-image: -moz-linear-gradient(center top , #D1D3D4, #A5A7A9);
+    background-repeat: repeat-x;
+    border: 1px solid #D2D2D2;
+    border-radius: 5px 5px 5px 5px;
+    color: #FFFFFF;
+    float: left;
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 16px; width:97.8%;}
+#loginFormForModal{ top:0px; height:auto!important;}
+div#loginFormContainer form#modalLoginForm input.ui-button-text{ width:auto;  background-color: #E6E6E6;
+background-image: -moz-linear-gradient(center top , #D1D3D4, #A5A7A9); background-repeat: repeat-x; border: 1px solid #D2D2D2; border-radius: 5px 5px 5px 5px; color: #636466!important; float: left; font-family: "Trebuchet MS",Arial,Helvetica,sans-serif; font-size:14px; margin-left:120px; font-weight:normal!important;}
+fieldset input.ui-button-text{ width:auto!important;  background-color: #E6E6E6!important;
+background-image: -moz-linear-gradient(center top , #D1D3D4, #A5A7A9)!important; background-repeat: repeat-x!important; border: 1px solid #D2D2D2!important; border-radius: 5px 5px 5px 5px!important; color: #636466!important; float: left!important; font-family: "Trebuchet MS",Arial,Helvetica,sans-serif!important; font-size:14px!important; margin-left:120px; font-weight:normal!important;}
+.createBtn{ width:auto!important;  background-color: #E6E6E6!important;
+background-image: -moz-linear-gradient(center top , #D1D3D4, #A5A7A9)!important; background-repeat: repeat-x!important; border: 1px solid #D2D2D2!important; border-radius: 5px 5px 5px 5px!important; color: #636466!important; float: left!important; font-family: "Trebuchet MS",Arial,Helvetica,sans-serif!important; font-size:14px!important; margin-left:130px; margin-top:10px; font-weight:normal!important;}
+
+#slideshowNav a {
+	margin: 0 8px; font-size:.9em; 
+	text-decoration: none;
+	display:inline-block;
+	padding: 1px 8px;
+	border: 1px solid #c0b3ad;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	color:#635f5c;
+	background: #ffffff;
+	}
+
+#slideshowNav a:hover, #slideshowNav a.activeSlide {
+	color:#ebded5;
+	border-color:#c0b3ad;
+	background: #a29688;
+
+	}
+
+#slideshowNav a:focus { outline: none; }
+.newsletterBox{ width:736px; float:left; margin:25px 0 0 0; padding:0 20px;}
+.newsletterLeft{ width:50%; float:left}

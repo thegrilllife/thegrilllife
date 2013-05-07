@@ -1,0 +1,96 @@
+#slideshowContainer{
+	height:197px;
+	position: relative;
+	overflow:hidden;
+}
+#wideSlideshow{
+	position:absolute;
+}
+#slideshowNav{
+	position:absolute;
+	right:10px;
+	bottom: 10px;
+	text-align: right;
+	z-index: 6;
+}
+#slideshowNav a{
+	position:relative;
+}
+
+#homepageTabs {
+	margin-top: 15px;
+}
+li.productListTemplate{
+	background:white;
+	margin: 8px;
+}
+
+.ui-tabs .ui-tabs-nav li {
+width:129px;
+height:38px;
+margin: 0px 2px;
+white-space:normal;
+text-align: center;
+}
+.dropdownBar {width: 635px;}
+.dropdownContainer { 
+	float: left; 
+	position:relative;
+	height: 50px;
+	z-index: 1000;
+}
+.dropdown { 
+	height: 0px; 
+	overflow: hidden; 
+	position:absolute;
+	top: 50px;
+	background: black;
+	z-index: 1000;
+	width: 160px
+}
+
+.dropdown li{
+	height:30px;
+}
+.dropdown li a{
+	font-size: 13px;
+    font-weight: lighter;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-default{
+	background: rgb(107,108,110);
+	background-image:none;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-default a{
+	color: white;
+}
+.ui-state-default.ui-tabs-active{background-image: none;}
+.ui-tabs .ui-tabs-nav li a{
+	float:none;
+    font-size: 14px;
+    font-weight: bold;
+}
+.ui-tabs-panel.ui-widget-content.ui-corner-bottom h1, h2, h3 {
+    color: #000000;
+    margin: 12px 0;
+	font-size: 19px;
+}
+.ui-tabs-panel.ui-widget-content.ui-corner-bottom p {
+    color: #000000;
+    font-size: 13px;
+    font-weight: lighter;
+    line-height: 18px;
+	margin: 7px;
+}
+
+.tabContent.ui-tabs-panel.ui-widget-content.ui-corner-bottom li {
+    font-size: 12px;
+    list-style: disc inside none;
+    margin-left: 20px;
+}
+#eventsList li{
+	color:#000000;
+	margin-left: 25px;
+	list-style: inside;
+	font-size: 12px;
+}

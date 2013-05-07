@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
-<html>
-<head>
+<html><head>
 <meta charset="utf-8">
 
 <!-- do not populate or add meta data or title, the SEO layer will add it -->
@@ -20,11 +19,11 @@ var _gaq = _gaq || {'push':function(){}} //here for testing. REPLACE BEFORE DEPL
 var myCreole;
 
 var app = {vars:{
-	"release":"201314.a",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+	"release":"20130503211000",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 	"_clientid":"zmvc",
 	"baseURL":"", //used in non-local mode.
 	"checkoutAuthMode" : "required",//can be passive, active or required
-	"testURL":"http://www.ylh.zoovy.com/" //used ONLY if protocol is file: (for testing)
+	"testURL":"http://www.73ee18a5.pop.zoovy.net/" //used ONLY if protocol is file: (for testing)
 	},u:{},rq:[]};
 
 //set base url so images, css, js, etc all load from appropriate location once deployed.
@@ -40,39 +39,36 @@ if(document.location.protocol != 'file:')	{
 all css includes need to be after the js that changes the base url.
 css files should be included before any .js file to ensure they are downloaded in parallel
 -->
+<link rel="stylesheet" type="text/css" href="jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="js/jquery-ui.css" />
 <link rel="stylesheet" type="text/css" href="app-quickstart.css" />
-<link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/ui-lightness/jquery-ui.css" />
-
+<link rel="stylesheet" type="text/css" href="_thegrilllife_styles.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script src="resources/jquery.ui.widget.min.js"></script><!-- here so that plugins that may load before the jqueryui lib load without error -->
+<script src="resources/jquery.ui.widget.min.js"></script>
 <script type="text/javascript" src="loadscript.js"></script>
-
+<script type="text/javascript" src="_thegrilllife.js"></script>
 
 
 
 <script type="text/javascript">
 app.u.loadScript(app.vars.baseURL+"app-quickstart-init.js");
 </script>
-
-
 </head>
 
 <body>
 <!-- DELETE THIS WHEN YOU GET STARTED -->
-<h1>WELCOME TO QUICKSTART</h1>
+<!--<h1>WELCOME TO QUICKSTART</h1>
 This file is intended to go along with the 10-step tutorial at:
-<a href="https://github.com/zoovy/AnyCommerce-Development/wiki/quickstart">https://github.com/zoovy/AnyCommerce-Development/wiki/quickstart</a>
+<a href="https://github.com/zoovy/AnyCommerce-Development/wiki/quickstart">https://github.com/zoovy/AnyCommerce-Development/wiki/quickstart</a>-->
 <!-- /DELETE THIS WHEN YOU GET STARTED -->
-
-
-
-
 <!-- what is displayed onLoad until the view is loaded -->
 <div id='appPreView'>
-<table>
+<div class="appview"><table>
 <tr>
-	<td><!-- put logo here --></td>
-	<td>
+	<td><img src="images/logo.gif" width="275" height="88"></td>
+    </tr>
+    <tr>
+	<td align="center">
 
 	<div id="loader">
 		<h3>One moment please.</h3>
@@ -88,10 +84,8 @@ This file is intended to go along with the 10-step tutorial at:
 	<div class='appMessaging'></div>
 	</td>
 </tr>
-</table>
+</table></div>
 </div>
-
-
 
 <div id='appView' class='displayNone'>
 
@@ -107,24 +101,301 @@ This file is intended to go along with the 10-step tutorial at:
 
 <!-- These add specific functionality for the app. In most cases, you want to leave them alone. -->
 <div id='appNav'>
+<div class="top_bg">
+	<div class="wrapper">
+    	<div class="top_hdr">
+        	<div class="alignright cart">
+            	<p><span class="cartItemCount">0</span> Items <span data-bind='var: product(extended); format:money; currencySign: $; hideZero:false; pretext:'></span>
+</p>
+             </div>
+            <div class="alignright top_links">
+            <a href="#" onClick="return showContent('customer',{'show' : 'myaccount'});">Login</a> 
+            <a href="#" onClick="return showContent('company',{'show':'contact'});">Customer Service</a>
+             <a href="#" onClick="return showContent('cart',{});">View Cart</a></div>
+            <div class="alignright call">Toll-Free: 855-257-8634<br></div>
+          <div class="alignright live_chat"><a href="#">LIVE CHAT</a></div>
+            <div class="alignright connect">
+            	<div class="alignleft"><span>Connect with Us</span></div>
+                <div class="alignleft"><a rel="no_follow" onClick="pageTracker._trackEvent('link', 'facebook', 'from: '+document.location.href);" target="facebook" href="http://www.facebook.com/pages/TheGrillLife/285412481574977"><img border="0" width="20" height="20" alt="facebook" src="images/facebook.png"></a> <a rel="no_follow" onClick="pageTracker._trackEvent('link', 'twitter', 'from: '+document.location.href);" target="twitter" href="http://twitter.com/https://twitter.com/TheGrillLife"><img border="0" width="20" height="20" alt="twitter" src="images/twitter.png"></a></div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>       
+    </div>
+</div>
+	<div class="wrapper">
+<div id="header">
+		<div class="alignleft logo"><a href="#"><img  onclick="return showContent('category',{'navcat' : '.'});" alt="The Grill Life" title="The Grill Life" src="images/logo.gif" border="0"></a></div>
+    
+        <div class="alignleft"><div class="banner_margin"><a href="#"  onclick="showContent('customer',{'show':'supportprice'});"><img src="images/banner1.jpg" border="0"></a></div></div>
+       <div class="alignleft"><div class="banner_margin"><a href="#"  onclick="showContent('customer',{'show':'newsletter'});"><img src="images/banner2.jpg" border="0"></a></div></div>
+        <div class="alignleft"><div class="banner_margin1"><a href="#" onclick="return showContent('company',{'show':'shipping'});"><img src="images/banner3.jpg" border="0"></a></div></div>
+        
+        <div class="clear"></div>       
+</div>
+
+<div class="nav">
+			<div class="alignleft search">
+<!-- Search -->
+
+<div id="wrapperFrmContainer">
+<form action="#" method="get" name="wrapperSearchFrm" id="wrapperSearchFrm">
+<input name="catalog" value="" type="hidden"/>
+<div class="alignleft textbox">
+<input name="keywords" type="search" id='txtSearch' />
+</div>
+<div class="alignleft search_btn"><input value="" src="images/search_btn.gif" type="image"/></div>
+<div class="clear"></div>
+</form>
+      
+      <!--<form method="get" class="productSearchForm" action="#" name="headerSearchFrm" id="headerSearchFrm">
+		  <input type="search" value="Find it here..." class="productSearchKeyword handleDefault" id="txtSearch" name="KEYWORDS">
+		  <input type="image" value="" src="images/nav-search.png" id="btnTopNavSearch">
+		  </form>-->
+                    
+
+</div>
+            </div>
+            <div class="alignleft">
+<div class="dropdownBar">
+
+	<div class="dropdownContainer" onMouseOver="showDropdown($(this), 350);" onMouseOut="hideDropdown($(this));">
+		<a href="#" class="top_cats" onClick="return showContent('category',{'navcat' : '.accessories'});">Accessories</a>
+		<div class="dropdown sub_cats">
+			<ul>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.basting_brush___mops'});">Basting Brush / Mops</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.charcoal_chimney'});">Charcoal Chimney</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.gloves'});">Gloves</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.grill_brushes'});">Grill Brushes</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.injectors'});">Injectors</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.jalapeno_roaster'});">Jalapeno Roaster</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.meat_hooks'});">Meat Hooks</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.planks'});">Planks</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.presses'});">Presses</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.rib_racks'});">Rib Racks</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.sets___kits'});">Sets / Kits</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.skewers'});">Skewers</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.smoke_box'});">Smoke Box</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.smoking_wood'});">Smoking Wood</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.spatula'});">Spatula</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.tongs'});">Tongs</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="dropdownContainer" onMouseOver="showDropdown($(this), 295);" onMouseOut="hideDropdown($(this));">
+		<a href="#" class="top_cats" onClick="return showContent('category',{'navcat' : '.brands'});">Brands</a>
+		<div class="dropdown sub_cats">
+			<ul>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.brands.bayou_classic'});">Bayou Classic</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.brands.brinkmann'});">Brinkmann</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.brands.cameron_s'});">Camerons</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.brands.charcoal_companion'});">Charcoal Companion</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.brands.kingsford'});">Kingsford</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.brands.man_law'});">Man Law</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.brands.mu_kitchen'});">MU Kitchen</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.brands.outset'});">Outset</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.brands.steven_raichlen'});">Steven Raichlen</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="dropdownContainer" onMouseOver="showDropdown($(this), 145);" onMouseOut="hideDropdown($(this));">
+		<a href="#" class="top_cats" onClick="return showContent('category',{'navcat' : '.gifts'});">Gifts</a>
+		<div class="dropdown sub_cats">
+			<ul>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.gifts.bb-queen'});">BB-Queen</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.gifts.by_gift_type'});">By Gift Type</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.gifts.digi-q_items'});">Digi-Q Items</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.gifts.gift_certificates'});">Gift Certificates</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="dropdownContainer" onMouseOver="showDropdown($(this), 145);" onMouseOut="hideDropdown($(this));">
+		<a href="#" class="top_cats" onClick="return showContent('category',{'navcat' : '.grills___smokers'});">Grills &amp; Smokers</a>
+		<div class="dropdown sub_cats">
+			<ul>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.grills___smokers.grills'});">Grills</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.grills___smokers.indoor_smokers'});">Indoor Smokers</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.grills___smokers.portable_grills'});">Portable Grills</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.grills___smokers.smokers'});">Smokers</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="dropdownContainer">
+		<a href="#" class="top_cats" onClick="return showContent('category',{'navcat' : '.rub___sauces'});">Rub &amp; Sauces</a>
+	</div>
+	
+	<div class="dropdownContainer" onMouseOver="showDropdown($(this), 265);" onMouseOut="hideDropdown($(this));">
+		<a href="#" class="top_cats" onClick="return showContent('category',{'navcat' : '.specialty'});">Specialty</a>
+		<div class="dropdown sub_cats">
+			<ul>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.specialty.bug_solutions'});">Bug Solutions</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.specialty.chicken_beerroaster'});">Chicken Beerroaster</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.specialty.grill___cook_books'});">Grill &amp; Cook Books</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.specialty.grilling_baskets'});">Grilling Baskets</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.specialty.indoor_smokers'});">Indoor Smokers</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.specialty.injectors'});">Injectors</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.specialty.kitchen_items'});">Kitchen Items</a></li>
+				<li><a href="#" onClick="return showContent('category',{'navcat' : '.specialty.tortilla_warmers'});">Tortilla Warmers</a></li>
+			</ul>
+		</div>
+	</div>
+	
+</div>
+</div>
+</div>
+</div>
+
 	<button class='displayNone prodDetailNextItemButton' data-app-role='prodDetailNextItemButton'>Next</button>
 	<button class='displayNone prodDetailPrevItemButton' data-app-role='prodDetailPrevItemButton'>Previous</button>
 </div>
-
+<div class="wrapper">
+<div id="leftside">
+	<div class="leftbox">
+    <h1>Top Brands</h1>
+    <ul>
+    	<li><a href="#" onClick="return showContent('category',{'navcat' : '.brands.bayou_classic'});">Bayou Classic</a></li>
+        <li><a href="#" onClick="return showContent('category',{'navcat' : '.brands.brinkmann'});">Brinkmann</a></li>
+        <li><a href="#" onClick="return showContent('category',{'navcat' : '.brands.cameron_s'});">Camerons</a></li>
+        <li><a href="#" onClick="return showContent('category',{'navcat' : '.brands.charcoal_companion'});">Charcoal Companion</a></li>
+        <li><a href="#" onClick="return showContent('category',{'navcat' : '.brands.kingsford'});">Kingsford</a></li>
+        <li><a href="#" onClick="return showContent('category',{'navcat' : '.brands.man_law'});">Man Law</a></li>
+        <li><a href="#" onClick="return showContent('category',{'navcat' : '.brands.mu_kitchen'});">MU Kitchen</a></li>
+        <li><a href="#" onClick="return showContent('category',{'navcat' : '.brands.outset'});">Outset</a></li>
+        <li><a href="#" onClick="return showContent('category',{'navcat' : '.brands.steven_raichlen'});">Steven Raichlen</a></li>
+    </ul>
+    </div>
+    <div class="leftbox">
+    <h1>Shop by Type of Product</h1>
+    <ul>
+    	<li><a href="#" onClick="return showContent('category',{'navcat' : '.specialty.chicken_beerroaster'});">Beercan Chicken Roasters</a></li>
+        <li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.grill_brushes'});">Grill Brushes</a></li>
+        <li><a href="#" onClick="return showContent('category',{'navcat' : '.grills___smokers'});">Grills &amp; Smokers</a></li>
+        <li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.jalapeno_roaster'});">Jalapeno Roasters</a></li>
+       	<li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.rib_racks'});">Rib Racks</a></li>
+        <li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.smoking_wood'});">Smoke Wood Chips</a></li>
+        <li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.smoke_box'});">Smoker Box</a></li>
+        <li><a href="#" onClick="return showContent('category',{'navcat' : '.accessories.tongs'});">Tongs</a></li>
+        
+    </ul>
+    </div>
+    <div class="leftbox">
+    <h1>More Ways to Shop</h1>
+    <ul>
+    	<li><a href="#" onClick="return showContent('category',{'navcat' : '.brands'});">See All Brands</a></li>
+        <li><a href="#" onClick="return showContent('category',{'navcat' : '.first_time_shoppers'});">First Time Shoppers</a></li>
+        <li><a href="#" onClick="return showContent('category',{'navcat' : '.gifts'});">Gift Ideas</a></li>
+        <li><a href="#" onClick="return showContent('category',{'navcat' : '.current_promotions'});">Current Promotions</a></li>
+    </ul>
+    </div>
+    
+   <div class="recent">
+    <h1>RECENTLY VIEWED</h1>
+   <div id='recentlyViewedItemsContainer' class='displayNone'>
+<ul data-bind="var: session(recentlyViewedItems); format: productList; extension: store_prodlist; loadsTemplate: productListTemplate; hide_summary:1; hide_pagination:1; withReviews:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+</div>
+    </div>
+    
+   
+    <div class="sideBanner">
+      <img src="images/outset_header.jpg" width="210" height="66"> 
+      
+    </div>
+</div>
 <div id='mainContentArea'></div><!-- DO NOT REMOVE - this is where the specific page (ex: homepage, product, category) content is going to go -->
-
+</div>
+<div class="cb"></div>
 <!-- ... your html ends -->
 <!-- /VIEW CONTENT -->
+<div class="footer">
+	<div class="wrapper">
+    	<div class="ftr_height">                
+<div class="ftr_margin">
+<div class="alignleft signup_img"><img src="images/newsltr.gif" alt="SignUp For Deals" height="28" width="187"></div>
+
+<form action='#' name='subscribeFrm' onSubmit="app.ext.store_crm.u.handleSubscribe($(this)); return false">
+<input name="check" value="1" type="hidden">
+	<div class="alignleft textbox"><input name="fullname" id="fullname"  required='required' placeholder='full name' type="text"></div>
+	<div class="alignleft textbox"><input id="email" name="email"  required='required' placeholder='email address' type="email"></div>
+    <input type='submit' class='ui-button-text ui-button ui-state-default ui-corner-all' value='Subscribe' />
+<fieldset data-bind="var:newsletters(@lists); format:subscribeCheckboxes; extension:store_crm;" class='borderNone subscriberLists'></fieldset>
+
+
+
+    <div class="clear"></div>
+</form>
+
 </div>
 
 
+</div>
+<table class="ftr_margin" width="900" align="center">
+<tbody><tr>
+	<td class="wikinav" valign="top" width="150"><h3>HELP</h3>
+<a class="wikilink wikilink_url" href="#" onClick="return showContent('company',{'show':'contact'});">Contact Us</a>
+<a class="wikilink wikilink_url" href="#" onClick="return showContent('company',{'show':'return'});">Return Policy</a>
+<a class="wikilink wikilink_url" href="#" onClick="return showContent('company',{'show':'shipping'});">Shipping</a>
+<a class="wikilink wikilink_url" href="#" onClick="return showContent('company',{'show':'privacy'});">Privacy Policy</a>
+<a class="wikilink wikilink_url" href="http://www.shareasale.com/shareasale.cfm?merchantID=44300">Affiliates</a></td>
+	<td class="wikinav" valign="top" width="150"><h3>What's Cookin'...</h3>
+<a class="wikilink wikilink_url" href="#" onClick="return showContent('company',{'show':'about'});">About TGL</a>
+<a class="wikilink wikilink_url" href="#" onClick="return showContent('company',{'show':'return'});">Terms &amp; Conditions</a>
+<a class="wikilink wikilink_url" href="#" onClick="return showContent('company',{'show':'recipes'});">TGL Recipes</a>
+</td>
+	<td valign="top">
+	<div class="marginLeft">
+	<h3>SHARE</h3>
+	
+<ul class="ftr_col_padding">
+	<li></li>
+    <ul>
+    	<li>
+		<table align="center"><tbody><tr><td valign="middle"><a target="facebook" href="http://www.facebook.com/pages/TheGrillLife/285412481574977"><img src="images/facebook_flw.png" alt="" height="42" width="125" border="0"></a>
+</td><td valign="middle">
 
+		</td><td valign="middle"><a href="#" target="mobile"><img src="images/mobile_website.png" height="43" width="120" border="0"></a>
+</td></tr></tbody></table>
+		</li>
+    </ul>
+</ul>
+	</div>
+	</td>
+	<td valign="top">
+            <div class="alignleft last_col">
+<div class="lastcol_mar"><a href="#"><img src="images/gototcart.gif" height="32" width="179"></a></div>
+<div class="lastcol_mar1"><img src="images/payment_icons.png" height="21" width="177" border="0"></div>
+<div class="lastcol_mar2"><a href="#"><img src="images/securearrow.gif" height="71" width="166"></a></div>
+          </div>
+	</td>
+</tr>
+</tbody></table>
 
+<div align="center"><div class="footer_sidebar">
+	<div class="wrapper"><table align="center"><tbody><tr><td valign="middle"><img alt="we ship FedEx" src="images/fedex.gif" height="31" width="88">
+</td><td valign="middle"><a href="#" onClick="javascript:window.open('https://www.paypal.com/us/cgi-bin/webscr?cmd=xpt/cps/popup/OLCWhatIsPayPal-outside','olcwhatispaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=350')"><img src="alt="Security Rights"images/PayPal.gif" border="0"></a>
+</td><td valign="middle"><img src="images/ssl-secure.gif" alt="" height="38" width="87">
+</td><td valign="middle"><a class="tf_upfront_badge" href="http://www.thefind.com/store/about-thegrilllife" title="TheFind Upfront"><img src="images/upfront.png" border="0"></a>
+ </td><td valign="middle"><img alt="we ship USPS" src="images/usps.gif" height="30" width="120">
+</td></tr></tbody></table></div></div></div>
 
+<div class="ftr_margin">
+	<div class="clear"></div>
+	<div class="copyright">
+<div>
+	<div>Copyright &copy; 2013, All Rights Reserved</div>
+	<div><br><a target="_blank" href="https://www.zoovy.com/" style="text-decoration: none;"><font color="515151">E-Commerce solution</font></a> provided by <a href="https://www.zoovy.com/"><font color="515151">Zoovy</font></a>.</div>
+	<div></div>
 
-
-
-
+</div>
+</div>
+</div>
+        
+  </div>
+</div>
+</div>
 
 <!--
 *************************************************************************************************************
@@ -157,26 +428,281 @@ COMMONLY EDITED TEMPLATES
 the homepageTemplate template is loaded into mainContentArea by default when the application loads
 -->
 <div id='homepageTemplate' class='homeTemplate'>
-	
+<img src="images/topbanner.jpg" width="776" height="43">
 
+<!--<img src="images/mainbanner.jpg" width="776" height="198" style="margin:12px 0;">
+-->
+<div id="slideshowContainer">
+	<div id="slideshowNav"></div>
+	<ul id="wideSlideshow" class="pics slideshow">
+		<li><img src="images/mainbanner.jpg"/></li>
+		<li><img src="images/mainbanner1.jpg"/></li>
+		<li><img src="images/mainbanner2.jpg"/></li>
+		<li><img src="images/mainbanner3.jpg"/></li>
+	</ul>
+</div>
 
-	
+<div id='homepageTabs'>
+<!-- This works because of some awesome code in app-quickstart-init.js-->
+	<ul class="alignCenter">
+		<li><a href='#springReady'>Get Ready For Spring</a></li>
+		<li><a href='#greatGifts'>Great Gifts</a></li>
+		<li><a href='#topAccessories'>Top Accessories</a></li>
+		<li><a href='#grillsSmokers'>Grills &amp; Smokers</a></li>
+		<li><a href='#professionalUse'>Professional Use</a></li>
+	</ul>
+	<div data-anytab-content='springReady'>
+		<ul data-bind="var: list($tab_1.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 25; hide_summary:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+	</div>
+	<div data-anytab-content='greatGifts'>
+		<ul data-bind="var: list($tab2.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 25; hide_summary:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+	</div>
+	<div data-anytab-content='topAccessories'>
+		<ul data-bind="var: list($tab3.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 25; hide_summary:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+	</div>
+	<div data-anytab-content='grillsSmokers'>
+		<ul data-bind="var: list($tab4.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 25; hide_summary:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+	</div>
+	<div data-anytab-content='professionalUse'>
+		<ul data-bind="var: list($tab5.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 25; hide_summary:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+	</div>
+</div>
+
+<!--
+<div class="feat_cats">
+	<div class="featured_prod">FEATURED CATEGORIES</div>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td valign="top" width="20%" align="center">
+            
+<div class="feat_cats_box"><div class="img"><a href="#"><img src="images/tgl_2.png" height="120" width="126" border="0"></a></div>
+<div class="name">Pro's Corner</div>
+</div>
+        </td>
+        <td valign="top" width="20%" align="center">
+            
+<div class="feat_cats_box"><div class="img"><a href="#."><img src="images/chicken_beeroaster_deluxe.jpg" height="120" width="126" border="0"></a></div><div class="name">Recipes to Share</div></div>
+        </td>
+        <td valign="top" width="20%" align="center">
+<div class="feat_cats_box"><div class="img"><a href="#."><img src="images/tgl_2.png" height="120" width="126" border="0"></a></div>
+<div class="name">TGL Gift Certificates</div>
+</div>
+</td>
+ <td valign="top" width="20%" align="center">
+<div class="feat_cats_box"><div class="img"><a href="#."><img src="images/115_p_guaranteeleft.gif" height="120" width="126" border="0"></a></div>
+<div class="name">Low Price Guarantee</div>
+</div>
+        </td>
+        <td valign="top" width="20%" align="center"><div class="feat_cats_box"><div class="img"><a href="#."><img src="images/no_hassle_returns.png" height="120" width="126" border="0"></a></div>
+<div class="name">No Hassle Returns</div>
+</div>        </td>
+    </tr>
+	</tbody></table>
+<div class="midmain">
 	<ul data-bind="var: category(@subcategoryDetail); format: categoryList; extension: store_navcats; loadsTemplate: categoryListTemplate; detail:max;" class='listStyleNone fluidList clearfix noPadOrMargin categoryList'></ul>
 
+	<ul data-bind="var: category(@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; hide_summary:1; before:; withReviews:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+
+	<ul data-bind="var: list($models.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 25;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul></div>
+
+</div>
+-->
+<div id="homepageBottomTabs">
+	<ul>
+		<li><a href='#aboutTGL'>About TGL</a></li>
+		<li><a href='#competitionsTGL'>TGL Competitions</a></li>
+		<li><a href='#vansTexasBBQ'>Van's Texas BBQ</a></li>
+		<li><a href='#brisketNachos'>Brisket Nachos</a></li>
+	</ul>
+
+	<div data-anytab-content='aboutTGL'>
+		<p>My father and I started TheGrillLife as a way to spread our love for good food and good times, all revolving around the Texas kitchen, the grill. When folks ask me what's our favorite dish or our best; I always tell them BBQ or anything off the grill. Our reasoning is simple, time with friends, hundreds of hours testing and tuning, and tons of smiles at the end. That is what we love.</p>
+		<p>We also want to share what we have learned over the years. Recipes, techniques, tip and trick; but also the tools of the trade. You can get grill products almost anywhere nowadays but we wanted to bring you good products from guys who actually use this stuff. At home and on the road during cook offs and competitions. We really use and test this stuff in the real world. We don’t really carry grill products, we carry grill tools. There is a difference… You wont find any wussy or low quality products here… there are plenty of places for you to find that stuff. What you will find is products that are tested and true to what they do. Quality, innovation, and a great price are what we are what we look for when we bring products to our customers, and that is what you can expect from your purchase. </p>
+	</div>
+	<div data-anytab-content='competitionsTGL'>
+		<p>Come see how we live The Grill Life here in Texas. Like I said, we don's just sell this stuff, we use it. Not just in our backyards to bring smiles to our friends and family but we also use our products in BBQ competitions all over the great state of Texas. We are in your area, come by and see us and we will be happy to share some tips, trick, brisket, and a cold one with you.</p>
+		<p>Some of our upcoming events:</p>
+		<ul id="eventsList">
+			<li>Buda, Texas - Buda Lions Club BBQ Cookoff- 100+ teams (Ribs, Chicken, Brisket, Beans)</li>
+			<li>Dripping Springs, Texas - Founders Day Festival 75+ Teams ( (Ribs, Chicken, Brisket, Beans, Chilli, Pork Sholder)</li>
+			<li> Austin, Tx - Austin Livestock Show and Rodeo- 250+ Teams (we are going to cook everything we can)</li>
+		</ul>
+		<p>Hope to you see you out... it will be a smoken' good time.</p>
+	</div>
+	<div data-anytab-content='vansTexasBBQ'>
+		<p>We are heading on that lonely destitute stretch of highway on route 37 from Corpus Christi to San Antonio, we are hungry too. Well the only thing we see besides fast food is a family owned BBQ truck stop named Vans. My son actually text me saying it Worth the stop" so we did. Exit 72 off HWY 37 going north. This place is definitely a truck stop, but not just for trucker for sure. The service is inviting and the atmosphere is typical of an old log cabin BBQ joint. We ordered our usual unsweetened ice tea, then a brisket plate. The ever smiling and good looking older waitress brought us our meals, but on a folded napkin, not a plate, pretty cool I thought. I asked if the potato salad is home made on site and she says "yes", low and behold, sure enough when I went to the restroom, I saw a heavy set lady in a back room peeling potatoes, it doesnt get more homemade then that, wow. The brisket plate was yummy and plentiful for sure, you even get a complementary second helping if you're still sucking your tongue hungry! Never heard of that, did you? Anyway, the brisket was tender and moist and not heavily smoked flavor, very good. The plate comes with fresh sweet onions, jalapeo, that homemade potato salad, with big hunks of pickles, beans in a rich gravy, like mom's and bread slices with homemade sauce for dipping. Of course is was all good and filling, especially for the price of $7.85, don't forget you get a free second helping! Oh, one more thing, the barbeque sauce is completely different then youre typical BBQ sauce, it's light orangey brown and sweet, weird but good and works with all the flavors. Like Mike said, its worth the stop". </p>
+	</div>
+	<div data-anytab-content='brisketNachos'>
+		<h3>Brisket Nachos</h3>
+			<p>I love nachos. In fact, some may say Im a nacho maniac. Having checked out the amazingly eclectic Memphis style pulled pork version from Chris Nibble Me This Grove earlier this week, I decided to dig in to my own archives and put my special Texas spin on this classic appetizer. Now dont get me wrong. I could eat the oh so awesome pulled pork version found at the Memphis Redbird stadium and elsewhere throughout Memphis 24/7, but the thought of slow cooked brisket and thinly sliced sweet onions was too hard to resist.</p>
+			<p>Begin by preheating the grill to medium. Meanwhile spread a bed of tortilla chips into an oven proof baking dish, top with thinly sliced brisket, add some thinly sliced Vidalia onion, slices of roasted Serrano chiles, a dusting of your favorite dry rub such as Obie-Cues Big Bulls Texas Brisket Rub , a drizzle of sauce (we used Rufus Teague Meat Sauce), and a heaping handful of grated sharp cheddar or Monterey jack cheese. Place on the grill for approximately 20 minutes until cheese has completely melted and meat has heated through then serve immediately.</p>
+			<p>By Clint Cantwell, Grilling.com Guest Editor </p>
+	</div>
+</div>
+
+<!--<div>
+<ul id="tabs">
+    <li><a href="#" title="tab1">One</a></li>
+    <li><a href="#" title="tab2">Two</a></li>
+
+    <li><a href="#" title="tab3">Three</a></li>
+    <li><a href="#" title="tab4">Four</a></li>    
+</ul>
+
+<div id="content"> 
+    <div id="tab1">
+        <h2>Lorem ipsum sit amet</h2>
+        <p>Praesent risus nisi, iaculis nec condimentum vel, rhoncus vel dolor. Aenean nisi lectus, varius nec tempus id, dapibus non quam.</p>
+        <p>Suspendisse ac libero mauris. Cras lacinia porttitor urna, vitae molestie libero posuere et. Mauris turpis tortor, mollis non vulputate sit amet, rhoncus vitae purus.</p>
+
+        <h3>Pellentesque habitant</h3>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>    
+    </div>
+    <div id="tab2">
+        <h2>Vivamus fringilla suscipit justo</h2>
+        <p>Aenean dui nulla, egestas sit amet auctor vitae, facilisis id odio. Donec dictum gravida feugiat.</p>
+        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras pretium elit et erat condimentum et volutpat lorem vehicula</p>
+
+        <p>Morbi tincidunt pharetra orci commodo molestie. Praesent ut leo nec dolor tempor eleifend.</p>    
+    </div>
+    <div id="tab3">
+        <h2>Phasellus non nibh</h2>
+        <p>Non erat laoreet ullamcorper. Pellentesque magna metus, feugiat eu elementum sit amet, cursus sed diam. Curabitur posuere porttitor lorem, eu malesuada tortor faucibus sed.</p>
+        <h3>Duis pulvinar nibh vel urna</h3>
+        <p>Donec purus leo, porttitor eu molestie quis, porttitor sit amet ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec accumsan ornare elit id imperdiet. </p>
+
+        <p>Suspendisse ac libero mauris. Cras lacinia porttitor urna, vitae molestie libero posuere et. </p>
+    </div>
+    <div id="tab4">
+        <h2>Cum sociis natoque penatibus</h2>
+        <p>Magnis dis parturient montes, nascetur ridiculus mus. Nullam ac massa quis nisi porta mollis venenatis sit amet urna. Ut in mauris velit, sed bibendum turpis.</p>
+        <p>Nam ornare vulputate risus, id volutpat elit porttitor non. In consequat nisi vel lectus dapibus sodales. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent bibendum sagittis libero.</p>
+        <h3>Imperdiet sem interdum nec</h3>
+
+        <p>Mauris rhoncus tincidunt libero quis fringilla.</p>    More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+    </div>
+</div>
+-->
+<style>
+/*#tabs
+{
+  overflow: auto;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#tabs li
+{
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+#tabs a
+{
+    -moz-box-shadow: -4px 0 0 rgba(0, 0, 0, .2);
+    -webkit-box-shadow: -4px 0 0 rgba(0, 0, 0, .2);
+    box-shadow: -4px 0 0 rgba(0, 0, 0, .2);
+    background: #ad1c1c;
+    background:    -moz-linear-gradient(220deg, transparent 10px, #ad1c1c 10px);
+    background:    -webkit-linear-gradient(220deg, transparent 10px, #ad1c1c 10px);     
+    background:     -ms-linear-gradient(220deg, transparent 10px, #ad1c1c 10px); 
+    background:      -o-linear-gradient(220deg, transparent 10px, #ad1c1c 10px); 
+    background:         linear-gradient(220deg, transparent 10px, #ad1c1c 10px);
+    text-shadow: 0 1px 0 rgba(0,0,0,.5);
+    color: #fff;
+    float: left;
+    font: bold 12px/35px 'Lucida sans', Arial, Helvetica;
+    height: 35px;
+    padding: 0 30px;
+    text-decoration: none;
+}
+
+#tabs a:hover
+{
+    background: #c93434;
+    background:    -moz-linear-gradient(220deg, transparent 10px, #c93434 10px);
+    background:    -webkit-linear-gradient(220deg, transparent 10px, #c93434 10px);     
+    background:     -ms-linear-gradient(220deg, transparent 10px, #c93434 10px); 
+    background:      -o-linear-gradient(220deg, transparent 10px, #c93434 10px); 
+    background:         linear-gradient(220deg, transparent 10px, #c93434 10px);     
+}
+
+#tabs a:focus
+{
+    outline: 0;
+}
+
+#tabs #current a
+{
+    background: #fff;
+    background:    -moz-linear-gradient(220deg, transparent 10px, #fff 10px);
+    background:    -webkit-linear-gradient(220deg, transparent 10px, #fff 10px);     
+    background:     -ms-linear-gradient(220deg, transparent 10px, #fff 10px); 
+    background:      -o-linear-gradient(220deg, transparent 10px, #fff 10px); 
+    background:         linear-gradient(220deg, transparent 10px, #fff 10px);
+    text-shadow: none;    
+    color: #333;
+}
+
+#content
+{
+    background-color: #fff;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+    background-image: -webkit-linear-gradient(top, #fff, #ddd); 
+    background-image:    -moz-linear-gradient(top, #fff, #ddd); 
+    background-image:     -ms-linear-gradient(top, #fff, #ddd); 
+    background-image:      -o-linear-gradient(top, #fff, #ddd); 
+    background-image:         linear-gradient(top, #fff, #ddd);
+    -moz-border-radius: 0 2px 2px 2px;
+    -webkit-border-radius: 0 2px 2px 2px;
+    border-radius: 0 2px 2px 2px;
+    -moz-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
+    -webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
+    box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
+    padding: 30px;
+}
+
+/* Remove the rule below if you want the content to be "organic" 
+#content div
+{
+    height: 220px;
+}
+*/
+/* --- 
+#about
+{
+    color: #999;
+}
+
+#about a
+{
+    color: #eee;
+}*/
+</style>
+
+<!--
+</div> 
+
+<ul data-bind="var: category(@subcategoryDetail); format: categoryList; extension: store_navcats; loadsTemplate: categoryListTemplate; detail:max;" class='listStyleNone fluidList clearfix noPadOrMargin categoryList'></ul>
+-->
 	<ul data-bind="var: category(@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; hide_summary:1; before:<h2>Featured Items</h2>; withReviews:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
 	<p data-bind="var: category(%page.description); format:wiki; wikiFormats:myRIA; editor: textarea;"></p>
 
 <!-- a sample of how to format an elastic native search in a data-bind -->
 	<ul id='homeProdSearchBestSellers' data-bind='var: elastic-native({"size":"4","mode":"elastic-native","filter":{"term":{"tags":"IS_BESTSELLER"}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:<h2>Best Sellers</h2>;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
 
-	<a href="#" onClick="return showContent('search',{'TAG':'IS_BESTSELLER'});">See all Best Sellers</a>
-
+<!--	<a href="#" onClick="return showContent('search',{'TAG':'IS_BESTSELLER'});">See all Best Sellers</a>
+-->
 <!-- a sample of how to get a 'list' src onto the page. -->
-	<ul data-bind="var: list($models.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 25;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+	<ul data-bind="var: list($models.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 20;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
 
 
 </div>
-
 
 
 
@@ -212,10 +738,6 @@ don't modify the 'data-templateid' unless you are changing template names and up
 
 
 
-
-
-
-
 <!-- used to display a category within a 'list', usually in the body of a category or the homepage. -->
 <ul>
 <li id='categoryListTemplate'>
@@ -243,7 +765,7 @@ Used for the product in a product list (prodlist), usually in the body of a cate
 the loadingBG class is removed (must be that classname) when the template is translated.
 remember to NOT put the button inside the 'onclick' container or two events will occur onclick.
 -->
-<li id='productListTemplate' class='loadingBG  ' onMouseOver="$('.quickView',$(this)).show();" onMouseOut="$('.quickView').hide();" >
+<li id='productListTemplate' class='loadingBG productListTemplate ' onMouseOver="$('.quickView',$(this)).show();" onMouseOut="$('.quickView').hide();" >
 
 	<button class='floatRight pointer quickView displayNone' onClick="quickView('product',{'templateID':'productTemplateQuickView','pid':$(this).closest('[data-pid]').attr('data-pid')});">Quickview</button>
 
@@ -262,7 +784,7 @@ remember to NOT put the button inside the 'onclick' container or two events will
 	
 	<form data-bind='var: product(pid); format:atcForm; extension:store_product;' class='prodViewerAddToCartForm clearfix' action='#' onSubmit="app.ext.myRIA.u.addItemToCart($(this),{'action':'modal'}); return false;">
 		<input type='hidden' name='qty' value='1' />
-		<button data-bind='format:addToCartButton; extension:myRIA; useParentData:true;'>more details</button>
+		<button data-bind='format:addToCartButton; extension:myRIA; useParentData:true;' class="viewdetails"><img src="images/viewdetails.gif" width="136" height="22"></button>
 	</form>
 	
 </li>
@@ -372,7 +894,7 @@ SANITY -> if you change the height and width of this image, change the .minimalM
 
 		<h6 class='hideInMinimalMode' data-bind='var: product(base_price); format:money; isElastic:1; currencySign: $;  hideZero:true; className:price; pretext: Our Price: ;'></h6>
 	</div>
-	<div class='hideInMinimalMode pointer moreDetails' onClick="showContent('product',{'pid':$(this).parent().attr('data-pid')});">more details</div>
+	<!--<div class='hideInMinimalMode pointer moreDetails' onClick="showContent('product',{'pid':$(this).parent().attr('data-pid')});">more details</div>-->
 </li>
 </ul>
 
@@ -665,7 +1187,7 @@ if you change these, you should move them above this comment so that when you (o
 <!-- loadingBG needed on this for app init (content may take a moment to load) -->
 <div id='companyTemplate' class='clearfix loadingBG'>
 
-	<div class='sideline' >
+<!--	<div class='sideline' >
 <nav id='companyNav'>
 <ul class='listStyleNone noPadOrMargin'>
 	<li><a href='#company?show=about'>About Us</a></li>
@@ -677,31 +1199,115 @@ if you change these, you should move them above this comment so that when you (o
 	<li><a href='#company?show=shipping'>Shipping Information</a></li>
 </ul>
 </nav>
-	</div>
+	</div> -->
 
 	<div class='mainColumn'>
 <!-- .textContentArea is used as a selector in quickstart.js because article tag type isn't ie8 friendly -->
 		<div id='aboutArticle' class='textContentArea article'>
 			<h1>About Us</h1>
+        <table width="100%" cellspacing="8" cellpadding="0" border="0">
+<tbody><tr><td align="left" colspan="2">
+<div class="ztxt" style="line-height:130%;">
+
+<font class="ztxt"><div style="font-weight:bold; font-size:16px; margin-bottom:4px;">The Grill Life</div>My father and I started TheGrillLife as a way to spread our love for good food and good times; all revolving around the Texas kitchen, the grill.  When folks ask me what's our favorite dish or our best; I always tell them BBQ or anything off the grill. Our reasoning is simple, time with friends, hundreds of hours testing and tuning, and tons of smiles at the end.  That is what we love.</font>
+</div>
+</td></tr>
+<tr><td width="50%" valign="top" align="right" height="195">
+<img width="250" height="187" border="0" alt="1/192221_1938149457945_1368653649_32236347_5246573_o.jpg" src="images/192221_1938149457945_1368653649_32236347_5246573_o.jpg" id="IMAGE1" name="IMAGE1">
+</td><td width="50%" align="left"><img width="250" height="187" border="0" alt="I/dscn0118_018.jpg" src="images/dscn0118_018.jpg" id="IMAGE2" name="IMAGE2"></td>
+</tr>
+<tr><td align="left" colspan="2"><div class="ztxt" style="line-height:130%;">
+<font class="ztxt"><div class="wiki_section">We also want to share what we have learned over the years.  Recipes, techniques, tip and trick; but also the tools of the trade.  You can get grill products almost anywhere nowadays but we wanted to bring you good products from guys who actually use this stuff.  At home and on the road during cook offs and competitions.  We really use and test this stuff in the real world.  We don'??t really carry grill products, we carry grill tools.  There is a difference.   You wont find any wussy or low quality products here, there are plenty of places for you to find that stuff.  What you will find is products that are tested and true to what they do.  Quality, innovation, and a great price are what we are what we look for when we bring products to our customers,  and that is what you can expect from your purchase.  
+<br>
+<div style="border-top:1px solid #EDF2FD; margin:5px 0px;"></div><br>
+<span style="font-weight:bold;">Stay Connected</span>
+<br>
+<a href="www.thegrilllife.com/subscribe.cgis" title="Sign up" class="wikilink wikilink_url">Sign up</a> For Our Newsletter for Extra Discounts, Award Winning Recipes, &amp; Tips
+<br>
+</div>
+<div class="wiki_section">Follow us on <a href="http://www.facebook.com/#!/pages/TheGrillLife/285412481574977?fref=ts" title="Facebook" class="wikilink wikilink_url">Facebook</a>
+</div></font></div></td></tr>
+<tr><td align="center" colspan="2">
+<img width="500" height="375" border="0" alt="D/dscn0142_042.jpg" src="images/dscn0142_042.jpg" id="IMAGE3" name="IMAGE3">
+
+</td></tr>
+</tbody></table>
 			<div data-bind='var: profile(zoovy:about); format:wiki; wikiFormats:myRIA;' id='aboutUsContent'></div>
 		</div>
-
+<div id='recipesArticle' class='textContentArea article'>
+			
+        <div class="wiki_section"><h1>TheGrillLife Recipe Collection</h1>
+<h3>Brisket Nachos</h3>
+Preheat grill to medium
+<br>
+While the grill is warming up, spread a layer of tortilla chips on a grill safe baking dish.  Top with thinly sliced brisket, add some thinly sliced Vidalia onion, slices of roasted Serrano chiles, a dusting of your favorite dry rub or seasoning, a bit  of your fav sauce, and a Texas size pile of cheddar cheese. (I also like pepper jack to spice it up)  Place on grill for about 20 min or unjtil meat has heated and cheese is melted.  Grab a cold one and enjoy.
+<br>
+<div style="border-top:1px solid #EDF2FD; margin:5px 0px;"></div><br>
+<h3>Stuffed Jalapeno Peppers</h3>
+You will need:
+<ul class="wiki_list">
+<li> 16 medium-sized jalapeno peppers</li>
+<li> 3-4 oz. cream cheese, softened </li>
+<li> 3/4-1 cup shredded cheddar cheese </li>
+<li> 1 clove garlic</li>
+<li> Diced 2-3 green onions</li>
+<li> Sliced 2-3 sun dried tomatoes (oil-packed)</li>
+<li> Chopped 8 slices bacon, halved (optional) </li>
+<li> Salt and pepper to taste </li>
+<li> Water-soaked toothpicks (5 minutes of soaking)</li>
+</ul>
+<br>
+Preheat grill to medium. Cut off top of each pepper and carefully core the pepper, removing all seeds.  You can keep some seeds in there if you like a litte or more heat.  If you do not have a jalapeno corer, a vegetable peeler is a good kitchen tool for hollowing out peppers. Remember the oils in jalapeno peppers are very hot, so take care not to touch your face or eyes. Place the peppers upright in roasting holes.
+In bowl, mix cream cheese (get to room tem makes it easier to work with), cheddar cheese, garlic, onion, tomatoes, salt and pepper. Put mixture in pastry bag and pipe cheese evenly into peppers. A knife or spoon may also be used to stuff the peppers. If desired, wrap upper half of each piece with a 1/2 slice of bacon and skewer with water-soaked toothpicks. The water helps keep the toothpicks from catching fire.
+<br>
+Grill peppers until bacon is done, about 20-30 minutes. Serve hot.
+<br>
+</div>
+			
+		</div>
 
 		<div id='contactArticle' class='displayNone textContentArea'>
-			<h1>Contact Information</h1>
+        <h1>Contact Us</h1>
+			<p class="ztxt">Here you can send a message regarding this site or a particular order. 
+            Below the contact information are links to some commonly requested pages. 
+            The contact form is the best way to reach us electronically.</p>
 			<form action='#' onSubmit="app.calls.appSendMessage.init($(this).serializeJSON(),{'callback':'showMessaging','parentID':'contactFormMessaging','message':'Thank you, your message has been sent'},'immutable'); app.model.dispatchThis('immutable');  return false;" id='contactForm' name='contactForm'>
 			<fieldset>
-				<legend>Contact Us</legend>
+				<legend style="font-size:18px; font-weight:bold;">Contact Us</legend>
 				<div id='contactFormMessaging'></div>
-				<div><label for='contactFormSender'>Email Address: </label><input type='email' name='sender' required='required' id='contactFormSender' /></div>
-				<div><label for='contactFormSubject'>Subject: </label><input type='text' name='subject' id='contactFormSubject' /></div>
-				<div><label for='contactFormOID'>Order ID: </label><input type='text' name='OID' id='contactFormOID' /></div>
+				<div><label for='contactFormSender'>Email : </label><input type='email' name='sender' required='required' id='contactFormSender' /></div>
+                <div><label for='contactFormName'>Name : </label><input type='text' name='fname' required='required' id='contactFormName' /></div>
+			 	<div><label for='contactFormOID'>Order ID: </label><input type='text' name='OID' id='contactFormOID' /></div>
+                <div><label for='contactFormPhone'>Phone: </label><input type='text' name='phone' id='contactFormPhone' /></div>
 				<div><label for='contactFormBody'>Message: </label><textarea name='body' required='required' id='contactFormBody'></textarea></div>
-				<div class='alignRight'><input type='submit' class='ui-button-text ui-button ui-state-default ui-corner-all' value='Send Message' />
+				<div class='alignRight' style="margin:0 90px 0 0;"><input type='submit' class='ui-button-text ui-button ui-state-default ui-corner-all' value='Send Message' style="width:135px; padding:5px 2px;"/>
 				</div>
 			</fieldset>
 			</form>
+
 			<div data-bind='var: profile(zoovy:contact); format:wiki; wikiFormats:myRIA;' id='contactContent'></div>
+            <div class="ztitle2">Address:</div>
+            <div style="margin-bottom:10px;">
+            5446  Hwy 290 Ste. 308<br>Austin, Tx. 78735
+            </div>
+            <div class="ztitle2">Phone:</div>
+	        <div style="margin-bottom:10px;">
+                855-257-8634</div>
+            <div class="ztitle2">Helpful links:</div>
+        	<div class='sideline' style="float: none;width: 40%;" >
+            <nav id='companyNav'>
+            <ul class='listStyleNone noPadOrMargin'>
+	           <li><a href='#company?show=#'> &#187; Order status</a></li>
+	           <li><a href='#company?show=#'> &#187; Recover lost password</a></li>
+	           <li><a href='#company?show=#'> &#187; Email/newsletter preferences</a></li>
+	           <li><a href='#company?show=shipping'> &#187; Shipping policy</a></li>
+               <li><a href='#company?show=return'> &#187; Return policy</a></li>
+	           <li><a href='#company?show=payment'> &#187; Payment policy</a></li>
+	           <li><a href='#company?show=privacy'> &#187; Privacy policy</a></li>
+               <li><a href='#company?show=faq'> &#187; FAQ</a></li>
+            </ul>
+            </nav>
+	        </div>
 		</div>
 
 
@@ -715,49 +1321,98 @@ if you change these, you should move them above this comment so that when you (o
 
 		<div class='displayNone textContentArea' id='paymentArticle'>
 			<h1>Payment Policy</h1>
+<div class="ztxt"><div class="wiki_section"><h2>Shop With Confidence</h2>
+At TheGrillLife.com, security and privacy are very important to us. We take precautions to protect your information. When you submit sensitive information via our website, your information is protected both online and offline. Wherever we collect sensitive information (such as credit card data), that information is encrypted and transmitted using a 128 bit encrypted secure server (SSL Certificate). We take pride in going above industry standards in security and privacy.
+ 
+<br><br>
+</div>
+<div class="wiki_section"><span style="font-weight:bold;">Payment Notes:</span>
+ 
+<ul class="wiki_list">
+<li> We accept Visa, MasterCard, American Express, Discover, PayPal, Paper Check, Checkout by Amazon and Google Checkout. </li>
+<li> Your billing address must match the address on your credit card. </li>
+<li> Please contact us if you have any questions. 1-855-257-8634 </li>
+</ul>
+</div></div>
+
 			<div data-bind='var: profile(zoovy:payment_policy); format:wiki; wikiFormats:myRIA;' id='paymentContent'></div>
 		</div>
 
 
-		<div class='displayNone textContentArea' id='privacyArticle'>
-			<h1>Privacy Statement</h1>
-	<h4>About this Privacy Policy:</h4>
-	<p>The entire site, or at least specific portions of this site are assisted by Zoovy technology. Zoovy has created this privacy policy as a template for customers who are using Zoovy technology with their websites. Zoovy in no way takes responsibility for the accuracy or enforcement of this policy. For a copy of Zoovy's privacy policy (which does not necessarily apply to the customers of its customers) visit http://www.zoovy.com/legal</p>
-
-	<p>Zoovy, Inc. has created this privacy statement for this Company in order to demonstrate our joint commitment to privacy. The following discloses the information gathering and dissemination practices for this website:</p>
-
-	<h5>Zoovy.com tracks IP Addresses</h5>
-	<p>Your IP address is used to help diagnose problems with our server, and to administer the Web site, in addition your IP address is used to help identify you and your shopping cart (in conjunction with a cookie.) We also use cookies to deliver content specific to your interests and to save your password so you don't have to re-enter it each time you visit our site.</p>
-
-
-	<h3>This site may contains links to other sites.</h3>
-	<p>This Company is not responsible for the privacy practices or the content of such Web sites, unless otherwise specified below your information is never shared with other companies, even those who are also using Zoovy technology. In the future Zoovy may provide you the ability to share your information across multiple websites which all utilize Zoovy technology however this will only be done at your explicit request.</p>
-
-	<h3>This site requires Unique Identifiers.</h3>
-	<p>This site uses an order form for customers to request information, products, and services, it also collects visitor's contact information (like their email address), in some circumstances their unique identifiers (like their pets name, or mothers maiden name), and financial information (like their account or credit card numbers). Contact information from the order form is used to send orders and information about our company to customers. The customer's contact information is also used to get in touch with the visitor when necessary. Users may opt-out of receiving future informational mailings; see the choice/opt-out section below, users may NOT opt out of receiving order notifications, or other contacts which are deemed essential by this Company.</p>
-
-	<h3>This site requires Financial Information.</h3>
-	<p>Financial information that is collected is used to bill the customer for products and services. Unique identifiers (such as pets name, and mothers maiden name) are collected from Web site visitors to verify the user's identity.</p>
-
-	<h3>This site may have Surveys and/or Contests.</h3>
-	<p>Our online surveys ask visitors for contact information (like their email address). We use contact data from our surveys to send the user information about our company. The customer's contact information is also used to contact the visitor when necessary. Users may opt-out of receiving future mailings; see the choice/opt-out section below. This site may also run contests in which case we may ask visitors for contact information (like their email address). Generally this information is used to verify eligibility, however we may also use contact data from our contests to send users information about this Company. The customer's contact information is also used to contact the visitor when necessary (for example winners). Users may opt-out of receiving future mailings; see the choice/opt-out section below. Financial information that is collected from our users is used to check the users' qualifications for registration and bill the user for products and services.</p>
-
-
-	<h3>Third Party Cookies</h3>
-	<p>Third party vendors, including Google, use cookies to serve the badge on the website and to serve ads based on a user's prior visits to the website.  Users may opt out of Google's use of cookies by visiting the Google advertising opt-out page.</p>
-
-	<h3>This site may contain Public Forums</h3>
-	<p>This site may include chat rooms, forums, message boards, and/or news groups available to its users. Please remember that any information that is disclosed in these areas becomes public information and you should exercise caution when deciding to disclose your personal information.</p>
-
-	<h3>About our System Security</h3>
-	<p>This site has security measures in place to protect the loss, misuse and alteration of the information under our control. Information is stored behind a firewall, against a password protected database system. Whenever sensitive information is accessed it is transmitted using strong SSL encryption. this Company may keep a copy of your information on its own system using Zoovy's WebAPI system, this system may have its own security measures in place.</p>
-
-	<h3>This site provides the choice to Opt In or Out</h3>
-	<p>Our site provides users the opportunity to opt-out of receiving communications from us at the point where we request information about the visitor. This site gives users the following options for removing their information from our database to not receive future communications or to no longer receive our service. Each time an information email is distributed, you have the option to use unique unsubscribe url which is attached to each outgoing email. Customers may unsubscribe at any time by simply logging into their accounts.</p>
-
-	<h3>We provide the ability to Correct/Update YOUR information.</h3>
-	<p>This site gives users the following options for changing and modifying information previously provided. Simply visit the customer login area of this website.</p>
-	<!-- !!! load amendments here -->
+		<div class='displayNone textContentArea' id='privacyArticle' style="text-align: justify;">
+			<font class="ztxt"><div class="wiki_section"><h1>Privacy Notice</h1>
+This privacy notice discloses the privacy practices for TheGrillLife.com. This privacy notice applies solely to information collected by this web site. It will notify you of the following: 
+1. What personally identifiable information is collected from you through the web site, how it is used and with whom it may be shared. 
+2. What choices are available to you regarding the use of your data. 
+3. The security procedures in place to protect the misuse of your information. 
+4. How you can correct any inaccuracies in the information. 
+Information Collection, Use, and Sharing
+<br>
+</div>
+<div class="wiki_section">We are the sole owners of the information collected on this site. We only have access to collect information that you voluntarily give us via email or other direct contact from you. We will not sell or rent this information to anyone. 
+We will use your information to respond to you, regarding the reason you contacted us. We will not share your information with any third party outside of our organization, other than as necessary to fulfill your request, i.e. to ship an order. 
+<br>
+</div>
+<div class="wiki_section">Unless you ask us not to, we may contact you via email in the future to tell you about specials, new products or services, or changes to this privacy policy. Your Access to and Control Over Information You may opt out of any future contacts from us at any time. You can do the following at any time by contacting us via the email address or phone number given on our website: 
+<ul class="wiki_list">
+<li> See what data we have about you, if any. </li>
+<li> Change/correct any data we have about you. </li>
+<li> Have us delete any data we have about you. </li>
+<li> Express any concern you have about our use of your data. </li>
+</ul>
+<br>
+</div>
+<div class="wiki_section"><h3>Security</h3>
+We take precautions to protect your information. When you submit sensitive information via the website, your information is protected both online and offline. 
+<br>
+Wherever we collect sensitive information (such as credit card data), that information is encrypted and transmitted using a 128 bit encrypted secure server (SSL Certificate). You can verify this by looking for our SSL Certificate icon at the bottom of your web browser, or looking for "https" at the beginning of the address of the web page. 
+<br>
+While we use encryption to protect sensitive information transmitted online, we also protect your information offline. Only employees who need the information to perform a specific job (for example, billing or customer service) are granted access to personally identifiable information. The computers/servers in which we store personally identifiable information are kept in a secure environment. If you feel that we are not abiding by this privacy policy, you should contact us immediately via telephone at 512-495-9457 or via email at customerservice@TheGrillLife.com. 
+<br><br>
+<h3>Registration</h3>
+In order to place an order, a user must first complete the registration form. During registration a user is required to give certain information (such as name and email address). This information is used to contact you about the products/services on our site in which you have expressed interest. At your option, you may also provide demographic information (such as gender or age) about yourself, but it is not required. 
+Orders
+<br>
+</div>
+<div class="wiki_section">We request information from you on our order form. To buy from us, you must provide contact information (like name and shipping address) and financial information (like credit card number, expiration date). This information is used for billing purposes and to fill your orders. If we have trouble processing an order, we'll use this information to contact you. 
+<br><br>
+</div>
+<div class="wiki_section"><h3>Links</h3>
+This web site contains links to other sites. Please be aware that we are not responsible for the content or privacy practices of such other sites. We encourage our users to be aware when they leave our site and to read the privacy statements of any other site that collects personally identifiable information. 
+<br><br>
+</div>
+<div class="wiki_section"><h3>Surveys &amp; Contests</h3>
+From time-to-time our site requests information via surveys or contests. Participation in these surveys or contests is completely voluntary and you may choose whether or not to participate and therefore disclose this information. Information requested may include contact information (such as name and shipping address), and demographic information (such as zip code, age level). Contact information will be used to notify the winners and award prizes. Survey information will be used for purposes of monitoring or improving the use and satisfaction of this site. 
+<br><br>
+</div>
+<div class="wiki_section">TheGrillLife.com will NOT provide or sell your information to anyone. All information you provide to us is transmitted using a 128bit encrypted secure server. All of your personal information is safe, guaranteed! 
+<ul class="wiki_list">
+<li> We will only use the information that we collect about you lawfully (in accordance with the Data Protection Act 1998). No information will be disclosed to third parties </li>
+<li> We will not send you any unsolicited e-mails about our or any other company's products or services </li>
+</ul>
+<br>
+</div>
+<div class="wiki_section"><h2>Collecting Prospect Information</h2>
+On some pages, you can submit information about other people. For example, if you order a gift online and want it sent directly to the recipient, you will need to submit the recipient's address. In this circumstance, the types of personal information collected are: Name, Address 
+<br>
+On some pages, you can submit information to other people. For example, you may use our "Email To A Friend" link to send information about one of our products to someone else. In this circumstance, the types of personal information collected are: Name, Email address 
+<br>
+We use the information you provide about someone else when placing an order only to ship the product and to confirm delivery. We do not share this information with outside parties except to the extent necessary to complete that order. 
+<br><br>
+</div>
+<div class="wiki_section"><h3>Children's Privacy</h3>
+Our Commitment To Children's Privacy: Protecting the privacy of the very young is especially important. For that reason, we never collect or maintain information at our website from those we actually know are under 13, and no part of our website is structured to attract anyone under 13. 
+Changes to our Privacy Policy
+<br>
+</div>
+<div class="wiki_section">If we decide to change our privacy policy, we will post those changes on our homepage so our users are always aware of what information we collect, how we use it, and under circumstances, if any, we disclose it. If at any point we decide to use personally identifiable information in a manner different from that stated at the time it was collected, we will notify users by way of an email. Users will have a choice as to whether or not we use their information in this manner. We will use information in accordance with the privacy policy under which the information was collected. 
+<br><br>
+</div>
+<div class="wiki_section"><h3>BBB OnLine Privacy Program</h3>
+Your privacy is important to us. By participating in the Council of Better Business Bureau's BBBOnLine Privacy Program we have made a commitment to meet the program's strict requirements regarding how we treat your information and have it verified by BBBOnLine. Further information about this program is available at www.bbbonline.org 
+<br>
+All BBBOnLine Privacy Program participants are required to work with the program's dispute resolution process. The Privacy Program will only accept complaints regarding the misuse of personally identifiable information by a website operator. For more information about the Privacy Program dispute resolution process visit www.bbbonline.org/privacy/dr.asp 
+</div></font><!-- !!! load amendments here -->
 		</div>
 
 
@@ -765,13 +1420,177 @@ if you change these, you should move them above this comment so that when you (o
 
 		<div class='displayNone textContentArea' id='returnArticle'>
 			<h1>Return Policy</h1>
+            <div class="ztxt"><div class="wiki_section"><h2>No Hassle Return Policy</h2>
+<h3>Our Promise</h3>
+ As part of our commitment to you, all TheGrillLife.com purchases are backed by our 100% satisfaction guarantee. If you are not satisfied with any of the products you have purchased you may return the item in its original packaging within 30 days of your shipment receipt date. Your satisfaction is our primary goal; please carefully review our return instructions and policy below.
+ If you have any questions, please call us first before shipping back any products.  855-257-8634
+ <br>
+<br>
+<h3>Return Instructions Easy Steps to No Hassle Returns</h3>
+Before shipping your return we recommend that you review our entire return policy below.
+1. Call or email us (855-257-8634/ customerservice@TheGrillLife.com) to speak with a customer service representative.
+2. Obtain your return merchandise authorization number (RMA#). 
+3. Securely pack the products for shipping including: all parts, pieces, printed material, and accessories, along with the products original packing.
+4. Include a copy of your packing slip and write your RMA# clearly on the slip.
+5. Mail Returns to: 
+<br>
+TGL Returns 
+5446 HWY 290 West Ste. 308 
+Austin, TX 78735 
+<br>
+</div>
+<div class="wiki_section">Customers pay for return shipment charges. To ensure that we receive the package we do recommend using a method of shipping with tracking and insurable. We cannot be liable for items lost in transit back to us. If your order was shipped free, a small shipping fee will apply to your order.
+  <br>
+<br>
+</div>
+<div class="wiki_section"><h3>Additional Return Policy</h3>
+Obtain an RMA Number and return your product within 30 days of receipt of your order.
+<ul class="wiki_list">
+<li> Customers must obtain an RMA # and return their item(s) within 30 days of receipt of their order. Return shipments received without an RMA will not qualify for a credit. </li>
+<li> Returned products are subject to inspection by TheGrillLife staff. All parts, pieces, printed materials, promotional items, e.g. gift with purchase and any original product packaging must be returned. Returned products may not be altered, over 50% used, or damaged. Multiple RMA requests for the same products or by the same customer are subject to review by TheGrillLife. We reserve the right to deny multiple refunds on products purchased and returned more than once. All refunds are also subject to a 15% re-stocking fee.</li>
+<li> Any tool return must contain all parts sold with the original purchase, including cords, chargers, adapters, carry case and any accessories. </li>
+<li> Returns that do not meet the return policy criteria will not qualify for a refund and may be returned at the customer's expense or destroyed upon request. Refund eligibility is determined once your return is received and inspected. We reserve the right to refuse a refund on any return shipment.</li>
+<li> Customers may only return two orders per 12 month period. </li>
+<li> We are not responsible for return packages that may be lost or damaged in transit. We recommend that you choose a method of shipping with tracking and insurance. </li>
+<li>Please make sure that you qualify before returning your items. If you have any questions or concerns or are unclear as to whether or not you may qualify for a refund, contact TheGrillLife Customer Service at customerservice@TheGrillLife.com or 512-495-9477 , Monday through Friday, 9AM - 5PM CST.</li>
+<li> Customers pay for return shipment charges.</li>
+<li> If your order shipped free, the original shipping cost will be deducted from total refund. If you paid for expedited shipping, you will be refunded the order total less our actual cost of expediting the order to you.</li>
+<li> If your shipment is returned due to an incorrect address, additional postage or other charges may apply.</li>
+<li> WE CANNOT ACCEPT RETURNS ON rubs, sauces, and other used items including any freight items once accepted by the customer.</li>
+</ul>
+<br>
+</div>
+
+<div class="wiki_section">Returns will be processed and approved credits issued within five business days of receipt
+</div></div>
+
 			<div data-bind='var: profile(zoovy:return_policy); format:wiki; wikiFormats:myRIA;' id='returnContent'></div>
 		</div>
 
 
 
 		<div class='displayNone textContentArea' id='shippingArticle'>
-			<h1>Shipping Information</h1>
+			<h1>Shipping Policy</h1>
+            <div class="ztxt"><div class="wiki_section">99.9% of all order placed before 3PM CST are shipped same day via standard shipping and can take 2-6 days to arrive. TheGrillLife.com takes great pride in offering brand name &amp; quality product at a great price. On a rare occasion our stock may become depleted. We take steps to ensure our system is updated quickly however at times the communication takes time to transfer &amp; populate. In these rare cases that an item is unavailable, you will be notified within one business day of the delay and an expected ship date. 
+<br><br>
+</div>
+<div class="wiki_section"><h2>FREE Domestic Shipping</h2>
+<ul class="wiki_list">
+<li> All Domestic orders SHIP FREE on orders over $99</li>
+<li> Excludes some larger smokers</li>
+<li> All domestic order ship in one business day (excluding holidays).</li>
+</ul>
+<br>
+</div>
+<div class="wiki_section"><h2>Domestic Shipping Chart</h2>
+<table cellspacing="0" cellpadding="5" class="zborder" width="777">
+<tbody><tr class="ztablerow">
+	<td class="ztable_head"><b>Destination </b></td>
+	<td class="ztable_head"><b>Service </b></td>
+	<td class="ztable_head"><b>Order By </b></td>
+	<td class="ztable_head"><b>Rate </b></td>
+	<td class="ztable_head"><b>Arrival</b></td>
+</tr>
+<tr class="ztablerow">
+	<td class="ztable_row">50 US States &amp;</td>
+	<td class="ztable_row"> Standard Shipping Service</td>
+	<td class="ztable_row"> 2 PM CST on Business Day </td>
+	<td class="ztable_row">$5.99 under $99, Free if Order Over $99 </td>
+	<td class="ztable_row"> 2-5 Business Days</td>
+</tr>
+<tr class="ztablerow">
+	<td class="ztable_row">PO Box, APO, FPO's</td>
+	<td class="ztable_row"> Standard Shipping Service</td>
+	<td class="ztable_row"> 2 PM CST on Business Day </td>
+	<td class="ztable_row"> $5.99 under $99, Free if Order Over $99</td>
+	<td class="ztable_row"> 2-5 Business Days</td>
+</tr>
+<tr class="ztablerow">
+	<td class="ztable_row">50 US States </td>
+	<td class="ztable_row"> FedEd 2nd Day </td>
+	<td class="ztable_row"> 2 PM CST on Business Day </td>
+	<td class="ztable_row"> $24.99 </td>
+	<td class="ztable_row"> 2 Busines Days</td>
+</tr>
+<tr class="ztablerow">
+	<td class="ztable_row">50 US States </td>
+	<td class="ztable_row"> FedEx Overnight</td>
+	<td class="ztable_row"> 2 PM CST on Business Day </td>
+	<td class="ztable_row"> $39.99 </td>
+	<td class="ztable_row"> Next Business Day</td>
+</tr>
+</tbody></table>
+<br>
+<ul class="wiki_list">
+<li> Above prices do not include large freight items like smokers and grills.</li>
+</ul>
+<br>
+</div>
+<div class="wiki_section"><h2>Domestic Shipping Notes:</h2>
+<ul class="wiki_list">
+<li> All orders over $200 ship via FedEx- signature may be required</li>
+<li> All orders over $300 require a signature unless customer notes release</li>
+<li> We can only ship to verified address </li>
+<li> All PO, APO, AFO ship via USPS only</li>
+<li> Orders weighing over 4lbs may be subject to an additional charge for shipping</li>
+<li> Sorry, no Saturday deliveries available for Express or Next Day Shipping.  Example: If you place an order on Friday with UPS Next Day delivery, your order will delivered on Monday.  If you place an order with FedEx 2nd Day delivery on Thursday your order will arrive on Monday.</li>
+</ul>
+<br>
+</div>
+<div class="wiki_section"><h2>Freight Shipments</h2>
+<ul class="wiki_list">
+<li> Be sure to inspect all items before you sign off as accepted</li>
+<li> Returns cannot be accepted once a customer signs as delivered</li>
+<li> Freight delivery is to a drive way to the alike</li>
+<li> Delivers cannot be made past steps of any kind nor over any surface other than concrete</li>
+<li> If you refuse delivery due to not qualifying for the above a restocking fee and the delivery cost will be deducted from your total refund.</li>
+</ul>
+<br>
+</div>
+<div class="wiki_section"><h2>International Shipping</h2>
+99.9% of all order placed before 1PM CST are shipped same day via USPS Global Priority Mail and can take 4-10 business days to arrive.  In these rare cases that an item is unavailable, you will be notified within one business day of the delay and an expected ship date.
+<br><br>
+</div>
+<div class="wiki_section"><h2>International Shipping Chart</h2>
+<table cellspacing="0" cellpadding="5" class="zborder" width="777">
+<tbody><tr class="ztablerow">
+	<td class="ztable_head"><b>Destination </b></td>
+	<td class="ztable_head"><b>Service </b></td>
+	<td class="ztable_head"><b>Order By </b></td>
+	<td class="ztable_head"><b>Rate </b></td>
+	<td class="ztable_head"><b>Arrival</b></td>
+</tr>
+<tr class="ztablerow">
+	<td class="ztable_row">Australia </td>
+	<td class="ztable_row"> Standard Global Priority </td>
+	<td class="ztable_row"> 2 PM CST on Business Day </td>
+	<td class="ztable_row">  $39.95 (Free if over $450) </td>
+	<td class="ztable_row"> 6-10 Business Days</td>
+</tr>
+<tr class="ztablerow">
+	<td class="ztable_row">Canada </td>
+	<td class="ztable_row"> Standard Global Priority </td>
+	<td class="ztable_row"> 2 PM CST on Business Day </td>
+	<td class="ztable_row"> $24.95 (Free if over $450) </td>
+	<td class="ztable_row"> 4-10 Business Days</td>
+</tr>
+<tr class="ztablerow">
+	<td class="ztable_row">Other Countries </td>
+	<td class="ztable_row"> Standard Global Priority </td>
+	<td class="ztable_row"> 2 PM CST on Business Day </td>
+	<td class="ztable_row"> $39.95 (Free if over $450) </td>
+	<td class="ztable_row"> 5-10 Business Days</td>
+</tr>
+</tbody></table>
+<br>
+</div>
+<div class="wiki_section"><h2>International Shipping Notes and Restrictions</h2>
+<ul class="wiki_list">
+<li> Please note we cannot ship some items outside the US including large grills and smokers.</li>
+<li> Customers are responsible for any and all custom/ import taxes.</li>
+<li> $5.00 Insurance is required for all international shipments.</li>
+</ul>
+</div></div>
 			<div data-bind='var: profile(zoovy:shipping_policy); format:wiki; wikiFormats:myRIA;' id='shippingContent'></div>
 		</div>
 
@@ -784,7 +1603,33 @@ if you change these, you should move them above this comment so that when you (o
 <!-- loadingBG needed on this for app init (content may take a moment to load) -->
 <div id='customerTemplate' class='clearfix'>
 
-	<div class='sideline' >
+	
+
+	<div class='mainColumn'>
+<!-- .textContentArea is used as a selector because IE8 doesn't play well  with tag type article as a selector -->
+
+<!--
+newsletterArticle is used for buyers who are not logged in or do not have an account.
+subscribeListsArticle is used for authenticated buyers
+-->
+		<div id='newsletterArticle' class='displayNone textContentArea'>
+			<h1>Subscribe to our Newsletter and Save!</h1>
+            <div style="clear:both;"></div>
+            <div class="newsletterBox">
+            <div class="newsletterLeft"><form action='#' name='subscribeFrm' onSubmit="app.ext.store_crm.u.handleSubscribe($(this)); return false">
+<input name="check" value="1" type="hidden">
+	<div class="textbox"><input name="fullname" id="fullname"  required='required' placeholder='full name' type="text"></div>
+	<div class="textbox"><input id="email" name="email"  required='required' placeholder='email address' type="email"></div>
+    <div style="margin:8px 0 0 0"><input type='submit' class='ui-button-text ui-button ui-state-default ui-corner-all' value='Subscribe' /></div>
+<fieldset data-bind="var:newsletters(@lists); format:subscribeCheckboxes; extension:store_crm;" class='borderNone subscriberLists'></fieldset>
+
+
+
+    <div class="clear"></div>
+</form>
+			<div data-bind="format:loadsTemplate; loadsTemplate:subscribeFormTemplate;"></div></div>
+            
+            <div class='sideline' >
 	<nav id='customerNav'>
 	<ul class='listStyleNone noPadOrMargin'>
 <!-- before restoring this, test cuz news form on left was causing some conflicts
@@ -796,20 +1641,58 @@ if you change these, you should move them above this comment so that when you (o
 		<li class='hideIfLoggedOut'><a href="#" onClick="app.ext.myRIA.u.handleLogoutActions(); return false;">Log Out</a></li>
 	</ul>
 	</nav>
-	</div>
-
-	<div class='mainColumn'>
-<!-- .textContentArea is used as a selector because IE8 doesn't play well  with tag type article as a selector -->
-
-<!--
-newsletterArticle is used for buyers who are not logged in or do not have an account.
-subscribeListsArticle is used for authenticated buyers
--->
-		<div id='newsletterArticle' class='displayNone textContentArea'>
-			<h1>Subscribe to our Newsletter and Save!</h1>
-			<div data-bind="format:loadsTemplate; loadsTemplate:subscribeFormTemplate;"></div>
+	</div></div>
+            
 		</div>
+	<div id='supportpriceArticle' class='displayNone textContentArea'>
 
+
+<img height="100" border="0" width="600" alt="115% Low Price Gurantee" src="images/115_p_guaranteeleft_jpeg.jpg" id="TOP_WIDE_BANNER1_img">
+<div class="ztxt" style="margin-bottom:15px; text-align:left; width:auto;"><div class="wiki_section"><h2>115% Low Price Guarantee</h2>
+TheGrillLife.com continuously researches our competitors' sites to ensure you are getting the lowest price. If you do find a better (net) price including shipping charges on another site (excluding online auctions) TheGrillLife will refund you 115% of the difference between the lower price and TheGrillLife's net purchase price. 
+<br>
+</div>
+<div class="wiki_section"><h3>Example:</h3>
+<ul class="wiki_list">
+<li class="wiki_listitem">Your actual (net) TheGrillLife purchase price of $50.00 includes no tax* and 5.99 domestic shipping. </li>
+<li class="wiki_listitem">You find another retail store selling the same product for $50.00, no tax* and $10.00 shipping, bringing your actual (net) purchase price to $60.00. </li>
+<li class="wiki_listitem">We will refund you 115% of the difference between $55.99 and $60.00 or $4.61, bringing your actual (net) purchase price to $51.38.</li>
+</ul>
+<br>
+</div>
+<div class="wiki_section"><h3>To secure your price guarantee:</h3>
+<ul class="wiki_list">
+<li class="wiki_listitem"> Purchase your favorite products from TheGrillLife.com. </li>
+<li class="wiki_listitem"> E-mail us at Customerservice@TheGrillLife.com or call us toll free at 855.257.3684.  You will need to provide your order number and a link to the website address or the name and phone number of the store where you found the item for less. </li>
+</ul>
+<br>
+</div>
+<div class="wiki_section"><h3>Please see Terms and Conditions Below</h3>
+<ul class="wiki_list">
+<li class="wiki_listitem"> We will refund 115% of the difference and e-mail or call you back with your new total within one business day of verifying the information you provide. </li>
+<li class="wiki_listitem"> If you have any questions about this offer please email us Customerservice@TheGrillLife.com or call us toll free at 855.257.8634. </li>
+</ul>
+<br>
+</div>
+<div class="wiki_section"><h3>Terms and Conditions:</h3>
+<ul class="wiki_list">
+<li class="wiki_listitem"> The product must be currently available in the identical type, size, and package. Offers exclusive to other retailers do not qualify. </li>
+<li class="wiki_listitem"> If you found the product at a US retail location, spa or physician's office you must supply a legitimate address and phone number. </li>
+<li class="wiki_listitem"> If you found the product on a website, you must provide a link to the website address where the product can be purchased. </li>
+<li class="wiki_listitem"> Does not apply to goods purchased through auction sites and their affiliated stores or Amazon. </li>
+<li class="wiki_listitem"> Does not apply to goods purchased directly from the manufacturer's website or store. </li>
+<li class="wiki_listitem"> Prices on websites must be in listed US dollars and product must be shipping from a US address. </li>
+<li class="wiki_listitem"> Differences are calculated on your actual or net TheGrillLife purchase price. </li>
+<li class="wiki_listitem"> Taxes will be excluded from the price difference calculation. </li>
+<li class="wiki_listitem"> Differences in shipping charges (if applicable) will be included when calculating the price difference. </li>
+<li class="wiki_listitem"> Your refund will be issued within 1 business day in the same form as your original payment. </li>
+</ul>
+<br>
+This offer is valid one time per order within five days of the purchase date. 
+</div></div><!-- end text area -->
+    
+            
+		</div>
 		<div id='subscriberListsArticle' class='displayNone textContentArea'>
 			<h1>Manage your Subscriptions</h1>
 <!-- save onchange -->
@@ -1406,28 +2289,7 @@ The 'data-action' attribute is used to assign an onclick.
 </tr>
 </table>
 
-
-
-
-
-
-
-
-
-
-
-
-
 </div><!-- /templates -->
-
-
-
-
-
-
-
-
-
 
 <div id='loginFormForModal' class='loginOption displayNone' title='Please log in'>
 
@@ -1443,12 +2305,12 @@ The 'data-action' attribute is used to assign an onclick.
 
 	<div>
 	<label for='modalLoginlogin'>Login/Email</label>
-	<input type='email' class='zform_textbox zform_email'  name='login' id='modalLoginlogin' value='' size='25' />
+	<input type='email' class='zform_textbox zform_email' required='required'  name='login' id='modalLoginlogin' value='' size='25' />
 	</div>
 
 	<div>
 	<label for='modalLoginpassword'>Password</label>
-	<input type='password' class='zform_textbox zform_password'   name='password' id='modalLoginpassword' value='' size='25' />
+	<input type='password' class='zform_textbox zform_password' required='required'   name='password' id='modalLoginpassword' value='' size='25' />
 	</div>
 
 	<div>
@@ -1467,19 +2329,14 @@ The 'data-action' attribute is used to assign an onclick.
 <div class='marginBottom'><label for='passwordRecoveryLogin'>Login/Email</label> <input type='text' name='login' required='required' id='passwordRecoveryLogin' size='25' /></div>
 
 <div><input type='submit' class='ui-button-text ui-button ui-state-default ui-corner-all ' value='Email Password to Me' /></div>
-
 </fieldset>
 </form>
-
 </div><!-- /recoverPasswordContainer -->
 
 <div>
 <hr />
-<button class='ui-button-text ui-button ui-state-default ui-corner-all ' onClick="showContent('customer',{'show':'newsletter'});">Create Account</button>
+<button class='ui-button-text ui-button ui-state-default ui-corner-all createBtn' onClick="showContent('customer',{'show':'newsletter'});">Create Account</button>
 </div>
-
-
-
 </div>
 
 <!-- this div will appear after a successful login. if you bind a new action to the button, best to empty the div and re-add the button, so the actions don't statck. -->
@@ -1516,16 +2373,16 @@ The 'data-action' attribute is used to assign an onclick.
 </ul>
 	</td>
 	<td>
-<form name='headerSearchFrm' action='#' class='productSearchForm marginLeft' method="get">
-	<input type='search' name='KEYWORDS' placeholder='product search' class="productSearchKeyword handleDefault" />
+<form name='headerSearchFrm' id='headerSearchFrm' action='#' class='productSearchForm marginLeft' method="get">
+	<input type='search' id='txtSearch' name='KEYWORDS' placeholder='product search' class="productSearchKeyword handleDefault" />
 	<button>Search</button>
 </form>
+
 	</td>
 </tr>
 </table>
 
 </div>
-
 
 </body>
 </html>
