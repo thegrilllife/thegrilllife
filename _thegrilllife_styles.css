@@ -1,4 +1,4 @@
-#slideshowContainer{
+/* #slideshowContainer{
 	height:197px;
 	position: relative;
 	overflow:hidden;
@@ -15,10 +15,14 @@
 }
 #slideshowNav a{
 	position:relative;
-}
-
+} */
 #homepageTabs {
 	margin-top: 10px;
+}
+#homepageBanner{
+	width:776;
+	height:198;
+	margin-top: -10px;
 }
 li.productListTemplate{
 	background:white;
@@ -95,7 +99,7 @@ text-align: center;
 	font-size: 12px;
 }
 #smallBanner{
-	margin-bottom: 5px;
+	margin: 10px 0px;
 	width:776px;
 	height:54px;
 }
