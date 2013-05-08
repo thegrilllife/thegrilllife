@@ -18,7 +18,7 @@
 }
 
 #homepageTabs {
-	margin-top: 15px;
+	margin-top: 10px;
 }
 li.productListTemplate{
 	background:white;
@@ -93,4 +93,9 @@ text-align: center;
 	margin-left: 25px;
 	list-style: inside;
 	font-size: 12px;
+}
+#smallBanner{
+	margin-bottom: 5px;
+	width:776px;
+	height:54px;
 }
