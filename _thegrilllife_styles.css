@@ -71,7 +71,7 @@ text-align: center;
 .ui-state-default.ui-tabs-active{background-image: none;}
 .ui-tabs .ui-tabs-nav li a{
 	float:none;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
 }
 .ui-tabs-panel.ui-widget-content.ui-corner-bottom h1, h2, h3 {
