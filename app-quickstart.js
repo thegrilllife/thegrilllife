@@ -745,7 +745,7 @@ fallback is to just output the value.
 					if(data.value.tags.indexOf('IS_PREORDER') > -1)	{buttonText = 'Preorder'; className = 'preorder';}
 					else if(data.value.tags.indexOf('IS_COLORFUL') > -1)	{buttonText = 'Choose Color'; className = 'variational colorful';}
 					else if(data.value.tags.indexOf('IS_SIZEABLE') > -1)	{buttonText = 'Choose Size'; className = 'variational sizeable;'}
-					else if(data.value.pogs.length > 0)	{buttonText = 'Choose Options'; className = 'variational';}
+					else if(data.value.pogs.length > 0)	{buttonText = 'View Details'; className = 'variational';}
 					else	{}
 					//look in tags for tags. indexOf
 					}

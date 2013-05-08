@@ -240,7 +240,7 @@ span.wait	{display:inline-block;}
 
 /******* global styles - added for cross-browser uniformity or usability ******/
 
-.viewdetails{ border:0px; background:none; padding:0px; margin:0px;}
+.viewdetails{padding:0px; margin:0px;}
 img	{border:0; vertical-align: top; display:inline-block;} /* vertical-align: top; removes the whitespace sometimes added under an image.  */
 button {display:inline-block; margin: 0; padding: 0; cursor:pointer !important;}
 p{margin-bottom:12px;}
@@ -429,7 +429,7 @@ and override using classes or id's as needed.
 
 .lineItemProdlist .prodThumb	{margin-right:12px;}
 
-.categoryList > li	{width:148px; height:200px; border: 1px solid #242525;text-align: center; padding:10px;}
+.categoryList > li	{width:148px; height:200px; border: 1px solid #242525;text-align: center; padding:6px;}
 
 .productList h4, .productList h5, .productList h6, .categoryList h4, .categoryList h5, .categoryList h6	{padding:0; margin:0;} /* h4 - h6 are used in default templates for name, price, etc */
 
