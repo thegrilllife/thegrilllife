@@ -217,8 +217,8 @@ ul, li {
 #leftside .recent{ border:#939598 solid 1px; margin:10px 0 0 0;}
 #leftside .recent h1{ background: url(images/navbg.gif); height:16px; font-size:16px; color:#fff; font-weight:bold; padding:14px 0 21px 12px;}
 #leftside .recent ul{ margin:12px 12px 5px 12px;}
-#leftside .recent ul li{ margin:0 0 20px 0px; min-height:51px; padding:0 0 0px; color:#51413b; clear:both;}
-#leftside .recent ul li span{ float:right; font-weight:bold;}
+#leftside .recent ul li{ margin:20px; min-height:51px; padding:0 0 0px; color:#51413b; clear:both;}
+#leftside .recent ul li span{font-weight:bold;}
 #leftside .recent img{ margin:0px 20px 0 0;}
 
 .sideBanner{ width:211px; margin:0px 12px 0 0; float:left;}
