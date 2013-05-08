@@ -404,8 +404,8 @@ and offMenu is toggle off, hiding the change button.
 /* app nav */
 
 #appNav {position:relative; overflow:visible; z-index:99;}
-#appNav .prodDetailPrevItemButton	{position:absolute; top:20px; left:-10px;}
-#appNav .prodDetailNextItemButton	{position:absolute; top:20px; right:-10px;}
+#appNav .prodDetailPrevItemButton	{position:absolute; top:35px; left:15px;}
+#appNav .prodDetailNextItemButton	{position:absolute; top:35px; right:15px;}
 
 
 

@@ -114,3 +114,6 @@ text-align: center;
 	height: 30px;
     margin-top: 3px;
 }
+#appNav button.ui-button-icon-only{
+	width: 5.8em;
+}
