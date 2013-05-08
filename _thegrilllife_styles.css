@@ -105,3 +105,12 @@ text-align: center;
 	position:relative;
 	float:right;
 }
+.productListTemplateProd_name{
+	height: 55px;
+	font-size: 12px;
+}
+.productListTemplatePrice{
+	display:block;
+	height: 30px;
+    margin-top: 3px;
+}

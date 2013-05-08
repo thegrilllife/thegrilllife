@@ -436,8 +436,8 @@ and override using classes or id's as needed.
 .productList li, .categoryList li	{font-size:14px; color:#51413b;}
 
 .productList h4, .categoryList h4	{font-size:1em;}
-.productList h5, .categoryList h5	{font-size:.9em;}
-.productList h6, .categoryList h6	{font-size:.85em;}
+.productList h5, .categoryList h5	{font-size:14px; font-weight: 300;}
+.productList h6, .categoryList h6	{font-size:13px;}
 
 
 /* multpage header for lists (product list) - most styling handled by jqueryUI */
