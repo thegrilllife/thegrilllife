@@ -61,11 +61,11 @@
 }
 
 #tabs .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
-    color: #fff !important;
+    color: #fff;
     text-decoration: none;
 }
 .ui-state-default a:visited {
-    color: #000 !important;
+    color: #000;
     text-decoration: none;
 }
 
