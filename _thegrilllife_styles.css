@@ -36,7 +36,7 @@ margin: 0px 2px;
 white-space:normal;
 text-align: center;
 }
-.dropdownBar {width: 635px;}
+.dropdownBar {width: 615px;}
 .dropdownContainer { 
 	float: left; 
 	position:relative;
@@ -116,4 +116,11 @@ text-align: center;
 }
 #appNav button.ui-button-icon-only{
 	width: 5.8em;
+}
+.searchFieldset{
+	border: none;
+	height: 38px;
+    position: relative;
+    left: -10px;
+    top: -5px;
 }

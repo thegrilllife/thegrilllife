@@ -109,10 +109,10 @@ ul, li {
     text-shadow: 2px 2px #1E1E1F;
 }
 
-.search_btn, .textbox {
-    line-height: normal !important;
+.textbox {
+    line-height: normal;
+	width: 305px;
 }
-
 .search_btn input {
     border: 0 none;
     cursor: pointer;

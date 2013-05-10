@@ -135,23 +135,35 @@ This file is intended to go along with the 10-step tutorial at:
 </div>
 
 <div class="nav">
-			<div class="alignleft search">
+<div class="alignleft search">
 <!-- Search -->
 
 <div id="wrapperFrmContainer">
-<form action="#" method="get" name="wrapperSearchFrm" id="wrapperSearchFrm">
-<input name="catalog" value="" type="hidden"/>
-<div class="alignleft textbox">
-<input name="keywords" type="search" id='txtSearch' />
-</div>
-<div class="alignleft search_btn"><input value="" src="images/search_btn.gif" type="image"/></div>
-<div class="clear"></div>
+<form action="#" method="get" name="headerSearchFrm" id="wrapperSearchFrm" class="productSearchForm">
+	<fieldset class="searchFieldset">
+		<div class="alignleft textbox">
+			<input type="search" name="KEYWORDS"  value="Enter Search Term" class="productSearchKeyword handleDefault" />
+		</div>
+		<div class="alignleft search_btn"><input value="Search" id="headerSearchSubmit" src="images/search_btn.gif" type="image" /></div>
+	</fieldset>
 </form>
       
-      <!--<form method="get" class="productSearchForm" action="#" name="headerSearchFrm" id="headerSearchFrm">
-		  <input type="search" value="Find it here..." class="productSearchKeyword handleDefault" id="txtSearch" name="KEYWORDS">
-		  <input type="image" value="" src="images/nav-search.png" id="btnTopNavSearch">
-		  </form>-->
+      <!--
+		<div class="clear"></div>
+	
+	<form id="headerSearchFrm" name="headerSearchFrm" action="#" class="productSearchForm" method="get">
+		<fieldset>
+		<legend>Search</legend>
+		<input type="search" name="KEYWORDS" value="Enter Search Term" class="productSearchKeyword handleDefault">
+		</fieldset>
+		<input class="search" id="headerSearchSubmit" type="submit" value="Search">
+	</form>	  
+	
+	<form method="get" class="productSearchForm" action="#" name="headerSearchFrm" id="headerSearchFrm">
+	  <input type="search" value="Find it here..." class="productSearchKeyword handleDefault" id="txtSearch" name="KEYWORDS">
+	  <input type="image" value="" src="images/nav-search.png" id="btnTopNavSearch">
+	  </form>
+	  -->
                     
 
 </div>
