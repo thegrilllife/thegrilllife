@@ -332,7 +332,7 @@ This file is intended to go along with the 10-step tutorial at:
 <input name="check" value="1" type="hidden">
 	<div class="alignleft"><input name="fullname" id="fullname"  required='required' placeholder='Full Name' type="text"></div>
 	<div class="alignleft"><input id="email" name="email"  required='required' placeholder='Email Address' type="email"></div>
-    <input type='submit' class='ui-button-text ui-button ui-state-default ui-corner-all' value='Subscribe' />
+    <input type='submit' id="subscribeBtn" class='ui-button-text ui-button ui-state-default ui-corner-all' value='Subscribe' />
 <fieldset data-bind="var:newsletters(@lists); format:subscribeCheckboxes; extension:store_crm;" class='borderNone subscriberLists'></fieldset>
 
 
@@ -929,7 +929,6 @@ It's done this way because ID's hard coded into template are bad mojo (templates
 <div class='prodlistRelatedContainer'>
 	<ul class='listStyleNone fluidList clearfix noPadOrMargin productList' data-bind="var: product(zoovy:related_products); format:productList; extension:store_prodlist;loadsTemplate:productListTemplate;hide_pagination:true;hide_summary:true; before:<h2>Similar Items</h2>; withReviews:1;"></ul>
 </div>
-
 
 </div><!-- productTemplate -->
 

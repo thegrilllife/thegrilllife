@@ -115,7 +115,7 @@ text-align: center;
     margin-top: 3px;
 }
 #appNav button.ui-button-icon-only{
-	width: 5.8em;
+	width: 7em;
 }
 .searchFieldset{
 	border: none;
@@ -123,4 +123,9 @@ text-align: center;
     position: relative;
     left: -10px;
     top: -5px;
+}
+#subscribeBtn{
+	position: relative;
+	bottom: 4px;
+	left: 8px;
 }
