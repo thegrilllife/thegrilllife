@@ -737,7 +737,7 @@ SANITY -> if you change the height and width of this image, change the .minimalM
 This allows for preview of search results, taking out for time being. Belongs in pointer div-->
 
 <li id='productListTemplateResults' class='loadingBG searchResultsProduct ' >
-	<div class='pointer'>
+	<div onClick="showContent('product',{'pid':$(this).attr('data-pid')})" data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;'  class='pointer'>
 		<div class='prodThumbContainer'>
 		<img src='blank.gif' class='prodThumb' alt='' data-bind='var: product(images); format:imageURL;isElastic:1;bgcolor:ffffff;' width='120' height='120' />
 		</div>
