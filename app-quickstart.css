@@ -242,7 +242,7 @@ span.wait	{display:inline-block;}
 
 /******* global styles - added for cross-browser uniformity or usability ******/
 
-.viewdetails{padding:0px; margin:0px;}
+.viewdetails{margin:0px;}
 img	{border:0; vertical-align: top; display:inline-block;} /* vertical-align: top; removes the whitespace sometimes added under an image.  */
 button {display:inline-block; margin: 0; padding: 0; cursor:pointer !important;}
 p{margin-bottom:12px;}
