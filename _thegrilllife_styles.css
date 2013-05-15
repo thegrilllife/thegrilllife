@@ -18,6 +18,7 @@
 } */
 #homepageTabs {
 	margin-top: 10px;
+	min-height:100px;
 }
 #homepageBanner{
 	width:776;

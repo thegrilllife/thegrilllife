@@ -50,11 +50,11 @@ app.rq.push(['templateFunction','productTemplate','onCompletes',function(P) {
 	}]);
 
 app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) { 
-	if(!$('#homepageTabs').hasClass('anytabs')){
-		$('#homepageTabs').addClass('anytabs').anytabs();
+	if(!$('#homepageTabs .tabContainer').hasClass('anytabs')){
+		$('#homepageTabs .tabContainer').addClass('anytabs').anytabs().fadeIn(800);
 		}
-	if(!$('#homepageBottomTabs').hasClass('anytabs')){
-		$('#homepageBottomTabs').addClass('anytabs').anytabs();
+	if(!$('#homepageBottomTabs .tabContainer').hasClass('anytabs')){
+		$('#homepageBottomTabs .tabContainer').addClass('anytabs').anytabs().fadeIn(800);
 		}
 	}]);
 

@@ -448,29 +448,31 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 	</div>
 -->
 
-	<div id='homepageTabs'>
+	<div id='homepageTabs' class="loadingBG">
 	<!-- This works because of some awesome code in app-quickstart-init.js-->
-		<ul class="alignCenter">
-			<li><a href='#springReady'>Get Ready For Spring</a></li>
-			<li><a href='#greatGifts'>Great Gifts</a></li>
-			<li><a href='#topAccessories'>Top Accessories</a></li>
-			<li><a href='#grillsSmokers'>Grills &amp; Smokers</a></li>
-			<li><a href='#professionalUse'>Professional Use</a></li>
-		</ul>
-		<div data-anytab-content='springReady'>
-			<ul data-bind="var: list($tab_1.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 25; hide_summary:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
-		</div>
-		<div data-anytab-content='greatGifts'>
-			<ul data-bind="var: list($tab2.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 25; hide_summary:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
-		</div>
-		<div data-anytab-content='topAccessories'>
-			<ul data-bind="var: list($tab3.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 25; hide_summary:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
-		</div>
-		<div data-anytab-content='grillsSmokers'>
-			<ul data-bind="var: list($tab4.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 25; hide_summary:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
-		</div>
-		<div data-anytab-content='professionalUse'>
-			<ul data-bind="var: list($tab5.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 25; hide_summary:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+		<div class="tabContainer displayNone">
+			<ul class="alignCenter">
+				<li><a href='#springReady'>Get Ready For Spring</a></li>
+				<li><a href='#greatGifts'>Great Gifts</a></li>
+				<li><a href='#topAccessories'>Top Accessories</a></li>
+				<li><a href='#grillsSmokers'>Grills &amp; Smokers</a></li>
+				<li><a href='#professionalUse'>Professional Use</a></li>
+			</ul>
+			<div data-anytab-content='springReady'>
+				<ul data-bind="var: list($tab_1.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 25; hide_summary:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+			</div>
+			<div data-anytab-content='greatGifts'>
+				<ul data-bind="var: list($tab2.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 25; hide_summary:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+			</div>
+			<div data-anytab-content='topAccessories'>
+				<ul data-bind="var: list($tab3.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 25; hide_summary:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+			</div>
+			<div data-anytab-content='grillsSmokers'>
+				<ul data-bind="var: list($tab4.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 25; hide_summary:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+			</div>
+			<div data-anytab-content='professionalUse'>
+				<ul data-bind="var: list($tab5.@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1; items_per_page: 25; hide_summary:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+			</div>
 		</div>
 </div>
 
@@ -513,36 +515,38 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 
 </div>
 -->
-	<div id="homepageBottomTabs">
-		<ul>
-			<li><a href='#aboutTGL'>About TGL</a></li>
-			<li><a href='#competitionsTGL'>TGL Competitions</a></li>
-			<li><a href='#vansTexasBBQ'>Van's Texas BBQ</a></li>
-			<li><a href='#brisketNachos'>Brisket Nachos</a></li>
-		</ul>
-
-		<div data-anytab-content='aboutTGL'>
-			<p>My father and I started TheGrillLife as a way to spread our love for good food and good times, all revolving around the Texas kitchen, the grill. When folks ask me what's our favorite dish or our best; I always tell them BBQ or anything off the grill. Our reasoning is simple, time with friends, hundreds of hours testing and tuning, and tons of smiles at the end. That is what we love.</p>
-			<p>We also want to share what we have learned over the years. Recipes, techniques, tip and trick; but also the tools of the trade. You can get grill products almost anywhere nowadays but we wanted to bring you good products from guys who actually use this stuff. At home and on the road during cook offs and competitions. We really use and test this stuff in the real world. We don’t really carry grill products, we carry grill tools. There is a difference… You wont find any wussy or low quality products here… there are plenty of places for you to find that stuff. What you will find is products that are tested and true to what they do. Quality, innovation, and a great price are what we are what we look for when we bring products to our customers, and that is what you can expect from your purchase. </p>
-		</div>
-		<div data-anytab-content='competitionsTGL'>
-			<p>Come see how we live The Grill Life here in Texas. Like I said, we don's just sell this stuff, we use it. Not just in our backyards to bring smiles to our friends and family but we also use our products in BBQ competitions all over the great state of Texas. We are in your area, come by and see us and we will be happy to share some tips, trick, brisket, and a cold one with you.</p>
-			<p>Some of our upcoming events:</p>
-			<ul id="eventsList">
-				<li>Buda, Texas - Buda Lions Club BBQ Cookoff- 100+ teams (Ribs, Chicken, Brisket, Beans)</li>
-				<li>Dripping Springs, Texas - Founders Day Festival 75+ Teams ( (Ribs, Chicken, Brisket, Beans, Chilli, Pork Sholder)</li>
-				<li> Austin, Tx - Austin Livestock Show and Rodeo- 250+ Teams (we are going to cook everything we can)</li>
+	<div id="homepageBottomTabs" class="loadingBG">
+		<div class="tabContainer displayNone">
+			<ul>
+				<li><a href='#aboutTGL'>About TGL</a></li>
+				<li><a href='#competitionsTGL'>TGL Competitions</a></li>
+				<li><a href='#vansTexasBBQ'>Van's Texas BBQ</a></li>
+				<li><a href='#brisketNachos'>Brisket Nachos</a></li>
 			</ul>
-			<p>Hope to you see you out... it will be a smoken' good time.</p>
-		</div>
-		<div data-anytab-content='vansTexasBBQ'>
-			<p>We are heading on that lonely destitute stretch of highway on route 37 from Corpus Christi to San Antonio, we are hungry too. Well the only thing we see besides fast food is a family owned BBQ truck stop named Vans. My son actually text me saying it Worth the stop" so we did. Exit 72 off HWY 37 going north. This place is definitely a truck stop, but not just for trucker for sure. The service is inviting and the atmosphere is typical of an old log cabin BBQ joint. We ordered our usual unsweetened ice tea, then a brisket plate. The ever smiling and good looking older waitress brought us our meals, but on a folded napkin, not a plate, pretty cool I thought. I asked if the potato salad is home made on site and she says "yes", low and behold, sure enough when I went to the restroom, I saw a heavy set lady in a back room peeling potatoes, it doesnt get more homemade then that, wow. The brisket plate was yummy and plentiful for sure, you even get a complementary second helping if you're still sucking your tongue hungry! Never heard of that, did you? Anyway, the brisket was tender and moist and not heavily smoked flavor, very good. The plate comes with fresh sweet onions, jalapeo, that homemade potato salad, with big hunks of pickles, beans in a rich gravy, like mom's and bread slices with homemade sauce for dipping. Of course is was all good and filling, especially for the price of $7.85, don't forget you get a free second helping! Oh, one more thing, the barbeque sauce is completely different then youre typical BBQ sauce, it's light orangey brown and sweet, weird but good and works with all the flavors. Like Mike said, its worth the stop". </p>
-		</div>
-		<div data-anytab-content='brisketNachos'>
-			<h3>Brisket Nachos</h3>
-				<p>I love nachos. In fact, some may say Im a nacho maniac. Having checked out the amazingly eclectic Memphis style pulled pork version from Chris Nibble Me This Grove earlier this week, I decided to dig in to my own archives and put my special Texas spin on this classic appetizer. Now dont get me wrong. I could eat the oh so awesome pulled pork version found at the Memphis Redbird stadium and elsewhere throughout Memphis 24/7, but the thought of slow cooked brisket and thinly sliced sweet onions was too hard to resist.</p>
-				<p>Begin by preheating the grill to medium. Meanwhile spread a bed of tortilla chips into an oven proof baking dish, top with thinly sliced brisket, add some thinly sliced Vidalia onion, slices of roasted Serrano chiles, a dusting of your favorite dry rub such as Obie-Cues Big Bulls Texas Brisket Rub , a drizzle of sauce (we used Rufus Teague Meat Sauce), and a heaping handful of grated sharp cheddar or Monterey jack cheese. Place on the grill for approximately 20 minutes until cheese has completely melted and meat has heated through then serve immediately.</p>
-				<p>By Clint Cantwell, Grilling.com Guest Editor </p>
+
+			<div data-anytab-content='aboutTGL'>
+				<p>My father and I started TheGrillLife as a way to spread our love for good food and good times, all revolving around the Texas kitchen, the grill. When folks ask me what's our favorite dish or our best; I always tell them BBQ or anything off the grill. Our reasoning is simple, time with friends, hundreds of hours testing and tuning, and tons of smiles at the end. That is what we love.</p>
+				<p>We also want to share what we have learned over the years. Recipes, techniques, tip and trick; but also the tools of the trade. You can get grill products almost anywhere nowadays but we wanted to bring you good products from guys who actually use this stuff. At home and on the road during cook offs and competitions. We really use and test this stuff in the real world. We don’t really carry grill products, we carry grill tools. There is a difference… You wont find any wussy or low quality products here… there are plenty of places for you to find that stuff. What you will find is products that are tested and true to what they do. Quality, innovation, and a great price are what we are what we look for when we bring products to our customers, and that is what you can expect from your purchase. </p>
+			</div>
+			<div data-anytab-content='competitionsTGL'>
+				<p>Come see how we live The Grill Life here in Texas. Like I said, we don's just sell this stuff, we use it. Not just in our backyards to bring smiles to our friends and family but we also use our products in BBQ competitions all over the great state of Texas. We are in your area, come by and see us and we will be happy to share some tips, trick, brisket, and a cold one with you.</p>
+				<p>Some of our upcoming events:</p>
+				<ul id="eventsList">
+					<li>Buda, Texas - Buda Lions Club BBQ Cookoff- 100+ teams (Ribs, Chicken, Brisket, Beans)</li>
+					<li>Dripping Springs, Texas - Founders Day Festival 75+ Teams ( (Ribs, Chicken, Brisket, Beans, Chilli, Pork Sholder)</li>
+					<li>Austin, Tx - Austin Livestock Show and Rodeo- 250+ Teams (we are going to cook everything we can)</li>
+				</ul>
+				<p>Hope to you see you out... it will be a smoken' good time.</p>
+			</div>
+			<div data-anytab-content='vansTexasBBQ'>
+				<p>We are heading on that lonely destitute stretch of highway on route 37 from Corpus Christi to San Antonio, we are hungry too. Well the only thing we see besides fast food is a family owned BBQ truck stop named Vans. My son actually text me saying it Worth the stop" so we did. Exit 72 off HWY 37 going north. This place is definitely a truck stop, but not just for trucker for sure. The service is inviting and the atmosphere is typical of an old log cabin BBQ joint. We ordered our usual unsweetened ice tea, then a brisket plate. The ever smiling and good looking older waitress brought us our meals, but on a folded napkin, not a plate, pretty cool I thought. I asked if the potato salad is home made on site and she says "yes", low and behold, sure enough when I went to the restroom, I saw a heavy set lady in a back room peeling potatoes, it doesnt get more homemade then that, wow. The brisket plate was yummy and plentiful for sure, you even get a complementary second helping if you're still sucking your tongue hungry! Never heard of that, did you? Anyway, the brisket was tender and moist and not heavily smoked flavor, very good. The plate comes with fresh sweet onions, jalapeo, that homemade potato salad, with big hunks of pickles, beans in a rich gravy, like mom's and bread slices with homemade sauce for dipping. Of course is was all good and filling, especially for the price of $7.85, don't forget you get a free second helping! Oh, one more thing, the barbeque sauce is completely different then youre typical BBQ sauce, it's light orangey brown and sweet, weird but good and works with all the flavors. Like Mike said, its worth the stop". </p>
+			</div>
+			<div data-anytab-content='brisketNachos'>
+				<h3>Brisket Nachos</h3>
+					<p>I love nachos. In fact, some may say Im a nacho maniac. Having checked out the amazingly eclectic Memphis style pulled pork version from Chris Nibble Me This Grove earlier this week, I decided to dig in to my own archives and put my special Texas spin on this classic appetizer. Now dont get me wrong. I could eat the oh so awesome pulled pork version found at the Memphis Redbird stadium and elsewhere throughout Memphis 24/7, but the thought of slow cooked brisket and thinly sliced sweet onions was too hard to resist.</p>
+					<p>Begin by preheating the grill to medium. Meanwhile spread a bed of tortilla chips into an oven proof baking dish, top with thinly sliced brisket, add some thinly sliced Vidalia onion, slices of roasted Serrano chiles, a dusting of your favorite dry rub such as Obie-Cues Big Bulls Texas Brisket Rub , a drizzle of sauce (we used Rufus Teague Meat Sauce), and a heaping handful of grated sharp cheddar or Monterey jack cheese. Place on the grill for approximately 20 minutes until cheese has completely melted and meat has heated through then serve immediately.</p>
+					<p>By Clint Cantwell, Grilling.com Guest Editor </p>
+			</div>
 		</div>
 	</div>
 <!--
