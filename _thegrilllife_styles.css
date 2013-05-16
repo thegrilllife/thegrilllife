@@ -76,12 +76,12 @@ text-align: center;
     font-weight: bold;
 }
 .ui-tabs-panel.ui-widget-content.ui-corner-bottom h1, h2, h3 {
-    color: #000000;
+    color: #222222;
     margin: 12px 0;
 	font-size: 16px;
 }
 .ui-tabs-panel.ui-widget-content.ui-corner-bottom p {
-    color: #000000;
+    color: #222222;
     font-size: 13px;
     font-weight: lighter;
     line-height: 18px;
@@ -134,4 +134,32 @@ text-align: center;
 	font-size: 17px;
     height: 45px;
     width: 125px;
+}
+.quickviewProdName{
+	font-size: 20px;
+}
+.quickviewProdDesc{
+	color:#222222;
+	font-size:16px;
+}
+.quickviewProdDesc h1, h2, h3{
+	font-size:18px;
+	color:#222222;
+}
+.quickviewProdDesc p{
+	line-height: 20px;
+}
+.ui-dialog .ui-dialog-titlebar-close{
+	height:40px;
+	width:62px;
+	position:absolute;
+	right: 9px;
+	top: 16px;
+}
+.floatRight.removeButton.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only{
+	height: 42px;
+    width: 80px;
+}
+.padMargBorderBottom.clearfix {
+    border: medium none;
 }
