@@ -1022,7 +1022,7 @@ CHECKOUT
 #loginFormForModal{position:relative; top:80px;}
 #modalCartContents{background:#fff;}
 #modalCart{ height:auto!important;}
-td.cartSummaryTotalsContainer div.ui-widget{ background:#FFFFFF!important; padding:10px 15px 0 15px;}
+td.cartSummaryTotalsContainer div.ui-widget{ background:#F7F7F7; padding:10px 15px 0 15px;}
 td.cartSummaryTotalsContainer div.ui-widget h2.ui-widget-header{ font-family:"Trebuchet MS",Arial,Helvetica,sans-serif; font-size:18px; font-weight:bold; text-align:center; color:#636466;}
 #modalCartContents{border:2px solid #D1D3D4; margin:10px 0 0 0; background:#f7f7f7; padding:10px}
 .ui-dialog .ui-dialog-title{background:#CCC; width:100%;}
