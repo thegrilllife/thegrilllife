@@ -151,14 +151,14 @@ text-align: center;
 }
 .ui-dialog .ui-dialog-titlebar-close{
 	height:38px;
-	width:62px;
+	width:80px;
 	position:absolute;
 	right: 15px;
 	top: 16px;
 }
 .floatRight.removeButton.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only{
 	height: 42px;
-    width: 80px;
+    width: 94px;
 }
 .padMargBorderBottom.clearfix {
     border: medium none;
