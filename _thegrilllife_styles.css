@@ -150,15 +150,12 @@ text-align: center;
 	line-height: 20px;
 }
 .ui-dialog .ui-dialog-titlebar-close{
-	height:38px;
-	width:80px;
 	position:absolute;
 	right: 15px;
-	top: 16px;
+	top: 26px;
 }
 .floatRight.removeButton.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only{
-	height: 42px;
-    width: 94px;
+	height: 34px;
 }
 .padMargBorderBottom.clearfix {
     border: medium none;
