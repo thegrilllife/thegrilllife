@@ -115,9 +115,6 @@ text-align: center;
 	height: 30px;
     margin-top: 3px;
 }
-#appNav button.ui-button-icon-only{
-	width: 7em;
-}
 .searchFieldset{
 	border: none;
 	height: 38px;
