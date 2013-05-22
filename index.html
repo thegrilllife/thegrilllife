@@ -1502,13 +1502,12 @@ Obtain an RMA Number and return your product within 30 days of receipt of your o
 <!--
 newsletterArticle is used for buyers who are not logged in or do not have an account.
 subscribeListsArticle is used for authenticated buyers
--->
 		<div id='newsletterArticle' class='displayNone textContentArea'>
 			<h1>Subscribe to our Newsletter and Save!</h1>
             <div style="clear:both;"></div>
             <div class="newsletterBox">
             <div class="newsletterLeft"><form action='#' name='subscribeFrm' onSubmit="app.ext.store_crm.u.handleSubscribe($(this)); return false">
-<input name="check" value="1" type="hidden">
+			<input name="check" value="1" type="hidden">
 	<div class="textbox"><input name="fullname" id="fullname"  required='required' placeholder='full name' type="text"></div>
 	<div class="textbox"><input id="email" name="email"  required='required' placeholder='email address' type="email"></div>
     <div style="margin:8px 0 0 0"><input type='submit' class='ui-button-text ui-button ui-state-default ui-corner-all' value='Subscribe' /></div>
@@ -1519,12 +1518,12 @@ subscribeListsArticle is used for authenticated buyers
     <div class="clear"></div>
 </form>
 			<div data-bind="format:loadsTemplate; loadsTemplate:subscribeFormTemplate;"></div></div>
-            
+			
             <div class='sideline' >
 	<nav id='customerNav'>
 	<ul class='listStyleNone noPadOrMargin'>
-<!-- before restoring this, test cuz news form on left was causing some conflicts
-		<li><a href='#customer?show=subscriberLists'>Newsletter Subscription</a></li> -->
+before restoring this, test cuz news form on left was causing some conflicts
+		<li><a href='#customer?show=subscriberLists'>Newsletter Subscription</a></li>
 		<li><a href='#customer?show=myaccount'>My Account</a></li>
 		<li><a href='#customer?show=changepassword'>Change Password</a></li>
 		<li><a href='#customer?show=orders'>Order History</a></li>
@@ -1535,6 +1534,21 @@ subscribeListsArticle is used for authenticated buyers
 	</div></div>
             
 		</div>
+-->
+          
+<div id='newsletterArticle' class='displayNone textContentArea'>
+		<h1>Subscribe to our Newsletter and Save!</h1>
+	<div data-bind="format:loadsTemplate; loadsTemplate:subscribeFormTemplate;"></div>
+</div>
+
+<div id='subscriberListsArticle' class='displayNone textContentArea'>
+	<h1>Manage your Subscriptions</h1>
+<!-- save onchange -->
+	<form action='#' name='subscribeFrm'>
+		<fieldset data-bind="var:newsletters(@lists); format:subscribeCheckboxes; extension:store_crm;" class='borderNone subscriberLists'></fieldset>
+	</form>
+</div>		
+
 	<div id='supportpriceArticle' class='displayNone textContentArea'>
 
 
@@ -1597,29 +1611,23 @@ This offer is valid one time per order within five days of the purchase date.
 
 		<div id='myaccountArticle' class='displayNone textContentArea'>
 			<h1>My Account</h1>
-
 			<section>
+				<div class='billAddressContainer' data-app-role='addressContainer' data-app-addresstype='bill'>
+					<div class='marginBottom'>
+						<button class='floatRight' data-app-event='myRIA|showBuyerAddressAdd'>Add New Billing Address</button>
+						<h2>Billing Address(es)</h2>
+					</div>
+					<div class='billAddresses' data-bind="var: buyer(@bill); format:processList; loadsTemplate:billAddressTemplate;"></div>
+				</div>
 
-<div class='billAddressContainer' data-app-role='addressContainer' data-app-addresstype='bill'>
-	<div class='marginBottom'>
-		<button class='floatRight' data-app-event='myRIA|showBuyerAddressAdd'>Add New Billing Address</button>
-		<h2>Billing Address(es)</h2>
-	</div>
-	<div class='billAddresses' data-bind="var: buyer(@bill); format:processList; loadsTemplate:billAddressTemplate;"></div>
-</div>
-
-<div class='shipAddressContainer' data-app-role='addressContainer' data-app-addresstype='ship'>
-	<div class='marginBottom'>
-		<button class='floatRight' data-app-event='myRIA|showBuyerAddressAdd'>Add New Shipping Address</button>
-		<h2>Shipping Address(es)</h2>
-	</div>
-	<div class='billAddresses' data-bind="var: buyer(@ship); format:processList; loadsTemplate:shipAddressTemplate;"></div>
-</div>
-
-
+				<div class='shipAddressContainer' data-app-role='addressContainer' data-app-addresstype='ship'>
+					<div class='marginBottom'>
+						<button class='floatRight' data-app-event='myRIA|showBuyerAddressAdd'>Add New Shipping Address</button>
+						<h2>Shipping Address(es)</h2>
+					</div>
+					<div class='billAddresses' data-bind="var: buyer(@ship); format:processList; loadsTemplate:shipAddressTemplate;"></div>
+				</div>
 			</section>
-
-
 		</div>
 
 
