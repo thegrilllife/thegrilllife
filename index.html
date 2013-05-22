@@ -351,13 +351,13 @@ This file is intended to go along with the 10-step tutorial at:
 				<a class="wikilink wikilink_url" href="#" onClick="return showContent('company',{'show':'return'});">Return Policy</a>
 				<a class="wikilink wikilink_url" href="#" onClick="return showContent('company',{'show':'shipping'});">Shipping</a>
 				<a class="wikilink wikilink_url" href="#" onClick="return showContent('company',{'show':'privacy'});">Privacy Policy</a>
-				<a class="wikilink wikilink_url" href="http://www.shareasale.com/shareasale.cfm?merchantID=44300">Affiliates</a>
+				<a class="wikilink wikilink_url" target="_blank" href="http://www.shareasale.com/shareasale.cfm?merchantID=44300">Affiliates</a>
 			</td>
 			<td class="wikinav" valign="top" width="150"><h3>What's Cookin'...</h3>
 				<a class="wikilink wikilink_url" href="#" onClick="return showContent('company',{'show':'about'});">About TGL</a>
-				<a class="wikilink wikilink_url" href="#" onClick="return showContent('company',{'show':'return'});">Terms &amp; Conditions</a>
 				<a class="wikilink wikilink_url" href="#" onClick="return showContent('company',{'show':'recipes'});">TGL Recipes</a>
 			</td>
+<!--				<a class="wikilink wikilink_url" href="#" onClick="return showContent('company',{'show':'priv'});">Terms &amp; Conditions</a>		-->
 
 		<td valign="top">
 		<div class="marginLeft">
@@ -1188,9 +1188,9 @@ Grill peppers until bacon is done, about 20-30 minutes. Serve hot.
         	<div class='sideline' style="float: none;width: 40%;" >
             <nav id='companyNav'>
             <ul class='listStyleNone noPadOrMargin'>
-	           <li><a href='#company?show=#'> &#187; Order status</a></li>
-	           <li><a href='#company?show=#'> &#187; Recover lost password</a></li>
-	           <li><a href='#company?show=#'> &#187; Email/newsletter preferences</a></li>
+	           <li><a href='#customer?show=orders'> &#187; My Orders</a></li>
+	           <li><a href='#customer?show=changepassword'> &#187; Recover lost password</a></li>
+	           <li><a href='#customer?show=newsletter'> &#187; Email/newsletter preferences</a></li>
 	           <li><a href='#company?show=shipping'> &#187; Shipping policy</a></li>
                <li><a href='#company?show=return'> &#187; Return policy</a></li>
 	           <li><a href='#company?show=payment'> &#187; Payment policy</a></li>
@@ -1638,16 +1638,15 @@ This offer is valid one time per order within five days of the purchase date.
 		<div id='changepasswordArticle' class='displayNone textContentArea'>
 			<h1>Change Password</h1>
 			<div id='changepasswordContainer'>
+				<form action='#' id='changePasswordForm' name='changePasswordForm' onSubmit="app.ext.store_crm.u.handleChangePassword('changePasswordForm',{'callback':'showMessaging','message':'Thank you, your password has been changed','targetID':'changepasswordContainer'}); return false">
+				<fieldset class='borderNone'>
 
-<form action='#' id='changePasswordForm' name='changePasswordForm' onSubmit="app.ext.store_crm.u.handleChangePassword('changePasswordForm',{'callback':'showMessaging','message':'Thank you, your password has been changed','targetID':'changepasswordContainer'}); return false">
-<fieldset class='borderNone'>
+				<div class='marginBottom'><label for='changePassword'>Password</label><input type='password' name='password' id='changePassword' size='35' /></div>
+				<div class='marginBottom'><label for='changePassword2'>Confirm Password</label><input type='password' name='password2' id='changePassword2' size='35' /></div>
+				<div class='marginBottom'><input type='submit' value='Change Password' class='loadingButton ui-button-text ui-button ui-state-default ui-corner-all'></div>
 
-<div class='marginBottom'><label for='changePassword'>Password</label><input type='password' name='password' id='changePassword' size='35' /></div>
-<div class='marginBottom'><label for='changePassword2'>Confirm Password</label><input type='password' name='password2' id='changePassword2' size='35' /></div>
-<div class='marginBottom'><input type='submit' value='Change Password' class='loadingButton ui-button-text ui-button ui-state-default ui-corner-all'></div>
-
-</fieldset>
-</form>
+				</fieldset>
+				</form>
 			</div>
 		</div>
 
