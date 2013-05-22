@@ -148,8 +148,6 @@ text-align: center;
 }
 .ui-dialog .ui-dialog-titlebar-close{
 	position:absolute;
-	right: 15px;
-	top: 26px;
 }
 .floatRight.removeButton.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only{
 	height: 34px;
@@ -159,4 +157,35 @@ text-align: center;
 }
 #modalCartContents{
 	background:none repeat scroll 0 0 #FFFFFF;
+}
+.social_icons{
+	float:left;
+	width:340px;
+/*	margin: 0 0 0 15px; */
+}
+.social_icons p{
+    font-size: 17px;
+    font-weight: 400;
+	margin:0;
+}
+.socialLink{
+	display: block;
+	float: left;
+	text-decoration: none;
+	margin: 0px 11px;
+}
+.socialLink img{
+	display: block;
+}
+.socialLink div{
+	display: block;
+	text-align: center;
+}
+#mobileSite{
+    border-color: #CCCCCC;
+    border-radius: 6px 6px 6px 6px;
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 14px;
+	margin-top: -1px;
 }
