@@ -32,7 +32,7 @@ app.rq.push(['script',0,app.vars.baseURL+'resources/jquery.showloading-v1.0.jt.j
 app.rq.push(['script',0,app.vars.baseURL+'resources/jquery.ui.anyplugins.js']); //in zero pass in case product page is first page.
 
 
-app.rq.push(['script',1,app.vars.baseURL+'cycle-2.9999.81.js']);//','validator':function(){return (jQuery().cycle) ? true : false;}});
+app.rq.push(['script',0,app.vars.baseURL+'cycle-2.9999.81.js']);//','validator':function(){return (jQuery().cycle) ? true : false;}});
 
 
 //add tabs to product data.
@@ -150,12 +150,12 @@ app.u.loadApp = function() {
 //Any code that needs to be executed after the app init has occured can go here.
 //will pass in the page info object. (pageType, templateID, pid/navcat/show and more)
 
-app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
-		var $target=$('#wideSlideshow');
-		if(!$target.hasClass('slideshowSet')){ //target doesn't already have slideshow
-			$target.addClass('slideshowSet').cycle({fx:'fade',speed:'slow',timeout:5000,pager:'#slideshowNav'});	
-			}
-		}]);
+// app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
+//		var $target=$('#wideSlideshow');
+//		if(!$target.hasClass('slideshowSet')){ //target doesn't already have slideshow
+//			$target.addClass('slideshowSet').cycle({fx:'fade',speed:'slow',timeout:5000,pager:'#slideshowNav'});	
+//			}
+//		}]);
 
 app.u.appInitComplete = function(P)	{
 	app.u.dump("Executing myAppIsLoaded code...");
