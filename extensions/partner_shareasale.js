@@ -56,6 +56,7 @@ var partner_shareasale = function() {
 				},
 			onError : function(){}
 			}
-		}, //callbacks
+		} //callbacks
+	}
 	return r;
 	}
