@@ -68,7 +68,7 @@ var partner_addthis = function() {
 							//To Customize the look and feel of the share icons, see here: http://support.addthis.com/customer/portal/articles/381238-addthis-toolbox
 							//Note: this also includes using custom share icons.
 							$(app.ext.partner_addthis.vars.selector, $('#productTemplate_'+app.u.makeSafeHTMLId(P.pid))).append(
-									'<div id="socialLinks" class="addthis_toolbox addthis_default_style">'
+									'<div class="addthis_toolbox addthis_default_style addthis_32x32_style">'
 								+		'<a class="addthis_button_preferred_1"></a>'
 								+		'<a class="addthis_button_preferred_2"></a>'
 								+		'<a class="addthis_button_preferred_3"></a>'
