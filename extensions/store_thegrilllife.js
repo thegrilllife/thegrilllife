@@ -55,6 +55,7 @@ var store_thegrilllife = function() {
 		populateRelatedItemsForProd : {
 			onSuccess : function(rd){
 				app.u.dump('BEGIN store_thegrilllife.callbacks.populateRelatedItemsForProd.onSuccess');
+				rd.$list.removeClass('loadingBG');
 				rd.$list.anycontent({
 					templateID : "productRelatedItemsListTemplate",
 					datapointer : rd.datapointer
@@ -118,7 +119,7 @@ var store_thegrilllife = function() {
 					//Haven't rendered this category yet, so let's give it a shot!
 					if(!thisCatIsRendered){
 						app.u.dump(recentCat+" has not yet been rendered");
-						var $itemListContainer = $('<div />');
+						var $itemListContainer = $('<div class="loadingBG relatedItemsList" />');
 						$itemListContainer.data('navcat', recentCat);
 						
 						var elasticsearch = app.ext.store_search.u.buildElasticRaw({
