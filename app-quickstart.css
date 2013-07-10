@@ -426,7 +426,7 @@ and override using classes or id's as needed.
 .quickView	{position:absolute; top:5px; right:5px; z-index:1001;} /* jqui modal has zindex 1002 */
 
 /* over rides - height and width ensure each row is the same height. percentages could be used for width */
-.productList > li	{height:250px; padding:10px; position:relative; width:148px; min-height:110px; border:#242525 solid 1px; text-align:center;}
+.productList > li	{height:250px; padding:10px; position:relative; width:148px; min-height:110px; border:#444444 solid 1px; text-align:center;}
 .lineItemProdlist > li	{position:relative; display:block; padding:12px 0; width:100% !important; height:auto; border-bottom:1px dotted #efefef;} /* single column product list - used in cart, checkout, etc. productList class is also defined in these cases. */
 
 .lineItemProdlist .prodThumb	{margin-right:12px;}
