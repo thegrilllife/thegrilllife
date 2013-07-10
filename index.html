@@ -449,7 +449,19 @@ This file is intended to go along with the 10-step tutorial at:
 
 
 <div id='appTemplates' class='displayNone'>
+<!--
 
+############################
+
+CUSTOM TEMPLATES
+
+############################
+
+-->
+
+<div id="productRelatedItemsListTemplate">
+	<ul data-bind="useParentData:true; format:productSearch; extension:myRIA; loadsTemplate:productListTemplateResults;"></ul>
+</div>
 
 <!--
 
@@ -828,7 +840,10 @@ this will likely become more flexible in the future. ###
 
 
 <div id='productTemplate' class='productPage'>
-
+	<div class="relatedItems"></div>
+	
+	
+	
 	<ul class='clearfix noPadOrMargin fluidList breadcrumb' data-bind='var: session(session.recentCategories.0); format:breadcrumb; extension:store_navcats; loadsTemplate: breadcrumbTemplate;'></ul>
 
 	<table class='prodViewerContainer'>

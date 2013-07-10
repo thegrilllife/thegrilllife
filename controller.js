@@ -2628,6 +2628,7 @@ return $r;
 			var $o; // what is appended to tag.  saved to iterim var so changes can occur, if needed (locking form fields for coupons, for example)
 			var parentID = $tag.attr('id') || "stufflist_"+app.u.guidGenerator().substring(0,10)
 			for(var i = 0; i < L; i += 1)	{
+				app.u.dump(data.value[i]);
 				stid = data.value[i].stid;
 //				app.u.dump(" -> STID: "+stid);
 				$o = app.renderFunctions.transmogrify({'id':parentID+'_'+stid,'stid':stid},templateID,data.value[i])
