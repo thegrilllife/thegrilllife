@@ -176,16 +176,16 @@ text-align: center;
     font-weight: 400;
 	margin:0;
 }
-.socialLink{
+.socialButton{
 	display: block;
 	float: left;
 	text-decoration: none;
 	margin: 0px 11px;
 }
-.socialLink img{
+.socialButton img{
 	display: block;
 }
-.socialLink div{
+.socialButton div{
 	display: block;
 	text-align: center;
 }
@@ -196,4 +196,5 @@ text-align: center;
     border-width: 1px;
     margin-left: 14px;
 	margin-top: -1px;
+
 }
