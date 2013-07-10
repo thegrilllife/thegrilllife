@@ -132,6 +132,14 @@ text-align: center;
     height: 45px;
     width: 125px;
 }
+.prodlistRelatedContainer > h2 {
+	color: #333333;
+    background: none repeat scroll 0 0 #D3D3D3;
+    border: 1px solid #6B6C6E;
+    border-radius: 5px 5px 5px 5px;
+    line-height: 32px;
+    padding-left: 14px;
+}
 .quickviewProdName{
 	font-size: 20px;
 }

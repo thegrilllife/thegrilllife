@@ -840,7 +840,7 @@ this will likely become more flexible in the future. ###
 
 
 <div id='productTemplate' class='productPage'>
-	<div class="relatedItems"></div>
+	
 	
 	
 	
@@ -983,7 +983,8 @@ this will likely become more flexible in the future. ###
 	</tr>
 	</table>
 	<div class='prodlistRelatedContainer'>
-		<ul class='listStyleNone fluidList clearfix noPadOrMargin productList' data-bind="var: product(zoovy:related_products); format:productList; extension:store_prodlist;loadsTemplate:productListTemplate;hide_pagination:true;hide_summary:true; before:<h2>Similar Items</h2>; withReviews:1;"></ul>
+		<h2>Similar Items</h2>
+		<div class="relatedItems"></div>
 	</div>
 
 </div><!-- productTemplate -->
