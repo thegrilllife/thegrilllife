@@ -11,7 +11,7 @@
 .ui-widget-header {
     background:none !important;
     border:none !important;
-    color: #222222;
+    color: #111111;
     font-weight: bold;
 }
 .ui-tabs .ui-tabs-panel {
@@ -26,7 +26,7 @@
 .ui-widget-content {
     /*background:none !important;*/
     border:none !important;
-    color: #222222;
+    color: #111111;
 }
 
 .ui-tabs .ui-tabs-nav li a {
@@ -87,7 +87,7 @@ span#ui-id-1.ui-dialog-title{   background-color: #E6E6E6;
     background-repeat: repeat-x;
     border: 1px solid #D2D2D2;
     border-radius: 5px 5px 5px 5px;
-    color: #636466;
+    color: #222222;
     float: left;
     font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
     font-size: 20px; width:97.8%;}
