@@ -111,20 +111,21 @@ This file is intended to go along with the 10-step tutorial at:
 	<div class="wrapper">
     	<div class="top_hdr">
         	<div class="alignright cart">
-            	<p><span class="cartItemCount">0</span> Items <span data-bind='var: product(extended); format:money; currencySign: $; hideZero:false; pretext:'></span>
-</p>
+            	<a href="#" onClick="return showContent('cart',{});"><p><span class="cartItemCount">0</span> Items <span data-bind='var: product(extended); format:money; currencySign: $; hideZero:false; pretext:'></span></p></a>
              </div>
             <div class="alignright top_links">
             <a href="#" onClick="return showContent('customer',{'show' : 'myaccount'});">Login</a> 
             <a href="#" onClick="return showContent('company',{'show':'contact'});">Customer Service</a>
              <a href="#" onClick="return showContent('cart',{});">View Cart</a></div>
-            <div class="alignright call">Toll-Free: 855-257-8634<br></div>
-          <div class="alignright live_chat"><a href="#">LIVE CHAT</a></div>
-            <div class="alignright connect">
+            <div class="connect">
             	<div class="alignleft"><span>Connect with Us</span></div>
-                <div class="alignleft"><a rel="no_follow" onClick="pageTracker._trackEvent('link', 'facebook', 'from: '+document.location.href);" target="facebook" href="http://www.facebook.com/pages/TheGrillLife/285412481574977"><img border="0" width="20" height="20" alt="facebook" src="images/facebook.png"></a> <a rel="no_follow" onClick="pageTracker._trackEvent('link', 'twitter', 'from: '+document.location.href);" target="twitter" href="http://twitter.com/https://twitter.com/TheGrillLife"><img border="0" width="20" height="20" alt="twitter" src="images/twitter.png"></a></div>
+                <div class="alignleft">
+					<a rel="no_follow" onClick="pageTracker._trackEvent('link', 'facebook', 'from: '+document.location.href);" target="facebook" href="http://www.facebook.com/pages/TheGrillLife/285412481574977"><img border="0" width="20" height="20" alt="facebook" src="images/facebook.png"></a> 
+					<a rel="no_follow" onClick="pageTracker._trackEvent('link', 'twitter', 'from: '+document.location.href);" target="twitter" href="https://twitter.com/TheGrillLife"><img border="0" width="20" height="20" alt="twitter" src="images/twitter.png"></a>
+				</div>
                 <div class="clear"></div>
             </div>
+            <div class="alignleft call">Toll-Free: 855-257-8634</div>
             <div class="clear"></div>
         </div>       
     </div>
